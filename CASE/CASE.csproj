@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroForm.Designer.cs">
+      <DependentUpon>CadastroForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashboardControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CASE_logo_login_otimizada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo Tecnológico Azul com Logo CASE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem título1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem título2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
