@@ -1,1 +1,1 @@
-# CASE
+# CASE - Commercial Automation Software
