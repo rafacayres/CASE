@@ -168,7 +168,6 @@ namespace CASE
             this.lblUsuario.Size = new System.Drawing.Size(47, 15);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuário";
-            this.lblUsuario.Click += new System.EventHandler(this.lblUsuario_Click);
             // 
             // lblSubtitulo
             // 
@@ -180,7 +179,6 @@ namespace CASE
             this.lblSubtitulo.TabIndex = 3;
             this.lblSubtitulo.Text = "Entre com suas credenciais para continuar";
             this.lblSubtitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSubtitulo.Click += new System.EventHandler(this.lblSubtitulo_Click);
             // 
             // lblTitulo
             // 
@@ -208,6 +206,7 @@ namespace CASE
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.Text = "CASE - Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             this.panelSenha.ResumeLayout(false);

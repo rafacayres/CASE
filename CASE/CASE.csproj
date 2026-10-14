@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\VisualUtils.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +146,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sem título2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem título3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layout-dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layout-dashboard%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-left-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-no-axes-column-increasing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

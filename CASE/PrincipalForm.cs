@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CASE.Utils;
 
 namespace CASE
 {
@@ -15,6 +16,14 @@ namespace CASE
         public PrincipalForm()
         {
             InitializeComponent();
+
+            VisualUtils.Arredondar(buttonDashboard, 8);
+            VisualUtils.Arredondar(buttonEstoque, 8);
+            VisualUtils.Arredondar(buttonRelatorios, 8);
+            VisualUtils.Arredondar(buttonProdutos, 8);
+            VisualUtils.Arredondar(buttonMovimentacoes, 8);
+            VisualUtils.Arredondar(buttonConfiguracoes, 8);
+            VisualUtils.Arredondar(buttonSair, 8);
         }
     }
 }
