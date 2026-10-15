@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CASE
 {
-    public partial class DashboardControl : Form
+    public partial class DashboardControl : UserControl
     {
         public DashboardControl()
         {
