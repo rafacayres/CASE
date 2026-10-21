@@ -15,7 +15,7 @@ namespace CASE
         {
             InitializeComponent();
 
-            VisualUtils.Arredondar(panelLogin, 18);
+            VisualUtils.Arredondar(panelLogin, 15);
             VisualUtils.Arredondar(btnEntrar, 7);
 
             VisualUtils.Arredondar(panelUsuario, 7);
