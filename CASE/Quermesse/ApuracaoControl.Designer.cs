@@ -1,0 +1,394 @@
+﻿namespace CASE.Quermesse
+{
+    partial class ApuracaoControl
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && components != null) components.Dispose();
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+        private void InitializeComponent()
+        {
+            this.pictureIconeTela = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblSubtitulo = new System.Windows.Forms.Label();
+            this.panelCorpo = new System.Windows.Forms.Panel();
+            this.panelFiltrosApuracao = new System.Windows.Forms.Panel();
+            this.lblSetor = new System.Windows.Forms.Label();
+            this.cmbSetorApuracao = new System.Windows.Forms.ComboBox();
+            this.lblTurno = new System.Windows.Forms.Label();
+            this.cmbTurnoApuracao = new System.Windows.Forms.ComboBox();
+            this.lblData = new System.Windows.Forms.Label();
+            this.dtpApuracao = new System.Windows.Forms.DateTimePicker();
+            this.panelDetalheApuracao = new System.Windows.Forms.Panel();
+            this.dgvApuracao = new System.Windows.Forms.DataGridView();
+            this.colApuracaoFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApuracaoSetor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApuracaoTurno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApuracaoItensvendidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApuracaoTotalregistrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelConferencia = new System.Windows.Forms.Panel();
+            this.lblTotalregistradoexemplo = new System.Windows.Forms.Label();
+            this.lblValorConferencia = new System.Windows.Forms.Label();
+            this.lblValorapuradoinformadoR = new System.Windows.Forms.Label();
+            this.numValorApurado = new System.Windows.Forms.NumericUpDown();
+            this.btnConferirApuracao = new System.Windows.Forms.Button();
+            this.lblSituacaoConferencia = new System.Windows.Forms.Label();
+            this.labelAviso = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconeTela)).BeginInit();
+            this.panelCorpo.SuspendLayout();
+            this.panelFiltrosApuracao.SuspendLayout();
+            this.panelDetalheApuracao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApuracao)).BeginInit();
+            this.panelConferencia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numValorApurado)).BeginInit();
+            // pictureIconeTela
+            this.pictureIconeTela.Name = "pictureIconeTela";
+            this.pictureIconeTela.Location = new System.Drawing.Point(30, 28);
+            this.pictureIconeTela.Size = new System.Drawing.Size(36, 36);
+            this.pictureIconeTela.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.pictureIconeTela.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.pictureIconeTela.BackColor = System.Drawing.Color.FromArgb(255, 232, 240, 252);
+            this.pictureIconeTela.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.pictureIconeTela.TabIndex = 0;
+            this.pictureIconeTela.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIconeTela.Image = global::CASE.Properties.Resources.LucideAzulApuracao;
+            this.pictureIconeTela.TabStop = false;
+            // lblTitulo
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Location = new System.Drawing.Point(80, 22);
+            this.lblTitulo.Size = new System.Drawing.Size(850, 42);
+            this.lblTitulo.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, (System.Drawing.FontStyle)1);
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(255, 16, 43, 73);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Apuração por setor";
+            this.lblTitulo.TextAlign = (System.Drawing.ContentAlignment)1;
+            // lblSubtitulo
+            this.lblSubtitulo.Name = "lblSubtitulo";
+            this.lblSubtitulo.Location = new System.Drawing.Point(82, 66);
+            this.lblSubtitulo.Size = new System.Drawing.Size(880, 24);
+            this.lblSubtitulo.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
+            this.lblSubtitulo.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
+            this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.lblSubtitulo.TabIndex = 2;
+            this.lblSubtitulo.Text = "Exemplo visual de conferência por funcionário, setor, data e turno";
+            this.lblSubtitulo.TextAlign = (System.Drawing.ContentAlignment)1;
+            // panelCorpo
+            this.panelCorpo.Name = "panelCorpo";
+            this.panelCorpo.Location = new System.Drawing.Point(30, 112);
+            this.panelCorpo.Size = new System.Drawing.Size(990, 530);
+            this.panelCorpo.Anchor = (System.Windows.Forms.AnchorStyles)13;
+            this.panelCorpo.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.panelCorpo.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
+            this.panelCorpo.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.panelCorpo.TabIndex = 3;
+            // panelFiltrosApuracao
+            this.panelFiltrosApuracao.Name = "panelFiltrosApuracao";
+            this.panelFiltrosApuracao.Location = new System.Drawing.Point(0, 0);
+            this.panelFiltrosApuracao.Size = new System.Drawing.Size(990, 88);
+            this.panelFiltrosApuracao.Anchor = (System.Windows.Forms.AnchorStyles)13;
+            this.panelFiltrosApuracao.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.panelFiltrosApuracao.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.panelFiltrosApuracao.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.panelFiltrosApuracao.TabIndex = 0;
+            // lblSetor
+            this.lblSetor.Name = "lblSetor";
+            this.lblSetor.Location = new System.Drawing.Point(18, 10);
+            this.lblSetor.Size = new System.Drawing.Size(180, 23);
+            this.lblSetor.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblSetor.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)0);
+            this.lblSetor.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
+            this.lblSetor.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.lblSetor.TabIndex = 0;
+            this.lblSetor.Text = "Setor";
+            this.lblSetor.TextAlign = (System.Drawing.ContentAlignment)1;
+            // cmbSetorApuracao
+            this.cmbSetorApuracao.Name = "cmbSetorApuracao";
+            this.cmbSetorApuracao.Location = new System.Drawing.Point(18, 42);
+            this.cmbSetorApuracao.Size = new System.Drawing.Size(265, 29);
+            this.cmbSetorApuracao.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.cmbSetorApuracao.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.cmbSetorApuracao.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.cmbSetorApuracao.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.cmbSetorApuracao.TabIndex = 1;
+            this.cmbSetorApuracao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSetorApuracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSetorApuracao.Items.AddRange(new object[] { "Bebidas", "Alimentação", "Doces", "Brincadeiras" });
+            this.cmbSetorApuracao.SelectedIndex = 0;
+            // lblTurno
+            this.lblTurno.Name = "lblTurno";
+            this.lblTurno.Location = new System.Drawing.Point(305, 10);
+            this.lblTurno.Size = new System.Drawing.Size(180, 23);
+            this.lblTurno.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblTurno.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)0);
+            this.lblTurno.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
+            this.lblTurno.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.lblTurno.TabIndex = 2;
+            this.lblTurno.Text = "Turno";
+            this.lblTurno.TextAlign = (System.Drawing.ContentAlignment)1;
+            // cmbTurnoApuracao
+            this.cmbTurnoApuracao.Name = "cmbTurnoApuracao";
+            this.cmbTurnoApuracao.Location = new System.Drawing.Point(305, 42);
+            this.cmbTurnoApuracao.Size = new System.Drawing.Size(200, 29);
+            this.cmbTurnoApuracao.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.cmbTurnoApuracao.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.cmbTurnoApuracao.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.cmbTurnoApuracao.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.cmbTurnoApuracao.TabIndex = 3;
+            this.cmbTurnoApuracao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTurnoApuracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTurnoApuracao.Items.AddRange(new object[] { "Manhã", "Tarde", "Noite" });
+            this.cmbTurnoApuracao.SelectedIndex = 2;
+            // lblData
+            this.lblData.Name = "lblData";
+            this.lblData.Location = new System.Drawing.Point(530, 10);
+            this.lblData.Size = new System.Drawing.Size(180, 23);
+            this.lblData.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblData.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)0);
+            this.lblData.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
+            this.lblData.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.lblData.TabIndex = 4;
+            this.lblData.Text = "Data";
+            this.lblData.TextAlign = (System.Drawing.ContentAlignment)1;
+            // dtpApuracao
+            this.dtpApuracao.Name = "dtpApuracao";
+            this.dtpApuracao.Location = new System.Drawing.Point(530, 42);
+            this.dtpApuracao.Size = new System.Drawing.Size(180, 25);
+            this.dtpApuracao.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.dtpApuracao.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.dtpApuracao.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.dtpApuracao.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0, 0);
+            this.dtpApuracao.TabIndex = 5;
+            this.dtpApuracao.Format = (System.Windows.Forms.DateTimePickerFormat)2;
+            this.dtpApuracao.CustomFormat = "";
+            this.dtpApuracao.ShowUpDown = false;
+            this.dtpApuracao.Value = new System.DateTime(2026, 10, 22, 0, 0, 0);
+            // panelDetalheApuracao
+            this.panelDetalheApuracao.Name = "panelDetalheApuracao";
+            this.panelDetalheApuracao.Location = new System.Drawing.Point(0, 105);
+            this.panelDetalheApuracao.Size = new System.Drawing.Size(990, 250);
+            this.panelDetalheApuracao.Anchor = (System.Windows.Forms.AnchorStyles)13;
+            this.panelDetalheApuracao.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.panelDetalheApuracao.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.panelDetalheApuracao.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.panelDetalheApuracao.TabIndex = 1;
+            // dgvApuracao
+            this.dgvApuracao.Name = "dgvApuracao";
+            this.dgvApuracao.Location = new System.Drawing.Point(12, 12);
+            this.dgvApuracao.Size = new System.Drawing.Size(966, 226);
+            this.dgvApuracao.Anchor = (System.Windows.Forms.AnchorStyles)15;
+            this.dgvApuracao.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.dgvApuracao.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.dgvApuracao.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.dgvApuracao.TabIndex = 0;
+            this.dgvApuracao.AllowUserToAddRows = false;
+            this.dgvApuracao.AllowUserToDeleteRows = false;
+            this.dgvApuracao.ReadOnly = true;
+            this.dgvApuracao.RowHeadersVisible = false;
+            this.dgvApuracao.MultiSelect = false;
+            this.dgvApuracao.EnableHeadersVisualStyles = false;
+            this.dgvApuracao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvApuracao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvApuracao.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvApuracao.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvApuracao.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvApuracao.BackgroundColor = System.Drawing.Color.White;
+            this.dgvApuracao.GridColor = System.Drawing.Color.FromArgb(255, 240, 243, 248);
+            this.dgvApuracao.RowTemplate.Height = 50;
+            this.dgvApuracao.ColumnHeadersHeight = 42;
+            this.dgvApuracao.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(255, 248, 250, 253);
+            this.dgvApuracao.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.colApuracaoFuncionario.Name = "colApuracaoFuncionario";
+            this.colApuracaoFuncionario.HeaderText = "Funcionário";
+            this.colApuracaoFuncionario.ReadOnly = true;
+            this.colApuracaoSetor.Name = "colApuracaoSetor";
+            this.colApuracaoSetor.HeaderText = "Setor";
+            this.colApuracaoSetor.ReadOnly = true;
+            this.colApuracaoTurno.Name = "colApuracaoTurno";
+            this.colApuracaoTurno.HeaderText = "Turno";
+            this.colApuracaoTurno.ReadOnly = true;
+            this.colApuracaoItensvendidos.Name = "colApuracaoItensvendidos";
+            this.colApuracaoItensvendidos.HeaderText = "Itens vendidos";
+            this.colApuracaoItensvendidos.ReadOnly = true;
+            this.colApuracaoTotalregistrado.Name = "colApuracaoTotalregistrado";
+            this.colApuracaoTotalregistrado.HeaderText = "Total registrado";
+            this.colApuracaoTotalregistrado.ReadOnly = true;
+            this.dgvApuracao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.colApuracaoFuncionario, this.colApuracaoSetor, this.colApuracaoTurno, this.colApuracaoItensvendidos, this.colApuracaoTotalregistrado });
+            // panelConferencia
+            this.panelConferencia.Name = "panelConferencia";
+            this.panelConferencia.Location = new System.Drawing.Point(0, 372);
+            this.panelConferencia.Size = new System.Drawing.Size(990, 158);
+            this.panelConferencia.Anchor = (System.Windows.Forms.AnchorStyles)13;
+            this.panelConferencia.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.panelConferencia.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.panelConferencia.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.panelConferencia.TabIndex = 2;
+            // lblTotalregistradoexemplo
+            this.lblTotalregistradoexemplo.Name = "lblTotalregistradoexemplo";
+            this.lblTotalregistradoexemplo.Location = new System.Drawing.Point(18, 12);
+            this.lblTotalregistradoexemplo.Size = new System.Drawing.Size(250, 25);
+            this.lblTotalregistradoexemplo.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblTotalregistradoexemplo.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)0);
+            this.lblTotalregistradoexemplo.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
+            this.lblTotalregistradoexemplo.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.lblTotalregistradoexemplo.TabIndex = 0;
+            this.lblTotalregistradoexemplo.Text = "Total registrado (exemplo)";
+            this.lblTotalregistradoexemplo.TextAlign = (System.Drawing.ContentAlignment)1;
+            // lblValorConferencia
+            this.lblValorConferencia.Name = "lblValorConferencia";
+            this.lblValorConferencia.Location = new System.Drawing.Point(18, 44);
+            this.lblValorConferencia.Size = new System.Drawing.Size(280, 45);
+            this.lblValorConferencia.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblValorConferencia.Font = new System.Drawing.Font("Segoe UI", 20F, (System.Drawing.FontStyle)1);
+            this.lblValorConferencia.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
+            this.lblValorConferencia.ForeColor = System.Drawing.Color.FromArgb(255, 16, 43, 73);
+            this.lblValorConferencia.TabIndex = 1;
+            this.lblValorConferencia.Text = "R$ 54,00";
+            this.lblValorConferencia.TextAlign = (System.Drawing.ContentAlignment)1;
+            // lblValorapuradoinformadoR
+            this.lblValorapuradoinformadoR.Name = "lblValorapuradoinformadoR";
+            this.lblValorapuradoinformadoR.Location = new System.Drawing.Point(325, 12);
+            this.lblValorapuradoinformadoR.Size = new System.Drawing.Size(320, 25);
+            this.lblValorapuradoinformadoR.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblValorapuradoinformadoR.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)0);
+            this.lblValorapuradoinformadoR.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
+            this.lblValorapuradoinformadoR.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.lblValorapuradoinformadoR.TabIndex = 2;
+            this.lblValorapuradoinformadoR.Text = "Valor apurado informado (R$)";
+            this.lblValorapuradoinformadoR.TextAlign = (System.Drawing.ContentAlignment)1;
+            // numValorApurado
+            this.numValorApurado.Name = "numValorApurado";
+            this.numValorApurado.Location = new System.Drawing.Point(325, 48);
+            this.numValorApurado.Size = new System.Drawing.Size(235, 25);
+            this.numValorApurado.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.numValorApurado.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.numValorApurado.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.numValorApurado.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.numValorApurado.TabIndex = 3;
+            this.numValorApurado.Minimum = 0M;
+            this.numValorApurado.Maximum = 1000000M;
+            this.numValorApurado.Value = 0M;
+            this.numValorApurado.DecimalPlaces = 2;
+            this.numValorApurado.ThousandsSeparator = true;
+            // btnConferirApuracao
+            this.btnConferirApuracao.Name = "btnConferirApuracao";
+            this.btnConferirApuracao.Location = new System.Drawing.Point(730, 41);
+            this.btnConferirApuracao.Size = new System.Drawing.Size(235, 40);
+            this.btnConferirApuracao.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.btnConferirApuracao.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)1);
+            this.btnConferirApuracao.BackColor = System.Drawing.Color.FromArgb(255, 23, 105, 210);
+            this.btnConferirApuracao.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.btnConferirApuracao.TabIndex = 4;
+            this.btnConferirApuracao.Text = "Conferir apuração";
+            this.btnConferirApuracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConferirApuracao.FlatAppearance.BorderSize = 0;
+            this.btnConferirApuracao.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 228, 234, 242);
+            this.btnConferirApuracao.UseVisualStyleBackColor = false;
+            this.btnConferirApuracao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConferirApuracao.DialogResult = (System.Windows.Forms.DialogResult)0;
+            // lblSituacaoConferencia
+            this.lblSituacaoConferencia.Name = "lblSituacaoConferencia";
+            this.lblSituacaoConferencia.Location = new System.Drawing.Point(18, 110);
+            this.lblSituacaoConferencia.Size = new System.Drawing.Size(940, 30);
+            this.lblSituacaoConferencia.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblSituacaoConferencia.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)0);
+            this.lblSituacaoConferencia.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
+            this.lblSituacaoConferencia.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.lblSituacaoConferencia.TabIndex = 5;
+            this.lblSituacaoConferencia.Text = "Valores ilustrativos · aguardando conferência";
+            this.lblSituacaoConferencia.TextAlign = (System.Drawing.ContentAlignment)1;
+            // labelAviso
+            this.labelAviso.Name = "labelAviso";
+            this.labelAviso.Location = new System.Drawing.Point(32, 652);
+            this.labelAviso.Size = new System.Drawing.Size(900, 28);
+            this.labelAviso.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.labelAviso.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
+            this.labelAviso.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
+            this.labelAviso.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.labelAviso.TabIndex = 4;
+            this.labelAviso.Text = "";
+            this.labelAviso.TextAlign = (System.Drawing.ContentAlignment)1;
+            this.Controls.Add(this.pictureIconeTela);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.lblSubtitulo);
+            this.Controls.Add(this.panelCorpo);
+            this.panelCorpo.Controls.Add(this.panelFiltrosApuracao);
+            this.panelFiltrosApuracao.Controls.Add(this.lblSetor);
+            this.panelFiltrosApuracao.Controls.Add(this.cmbSetorApuracao);
+            this.panelFiltrosApuracao.Controls.Add(this.lblTurno);
+            this.panelFiltrosApuracao.Controls.Add(this.cmbTurnoApuracao);
+            this.panelFiltrosApuracao.Controls.Add(this.lblData);
+            this.panelFiltrosApuracao.Controls.Add(this.dtpApuracao);
+            this.panelCorpo.Controls.Add(this.panelDetalheApuracao);
+            this.panelDetalheApuracao.Controls.Add(this.dgvApuracao);
+            this.panelCorpo.Controls.Add(this.panelConferencia);
+            this.panelConferencia.Controls.Add(this.lblTotalregistradoexemplo);
+            this.panelConferencia.Controls.Add(this.lblValorConferencia);
+            this.panelConferencia.Controls.Add(this.lblValorapuradoinformadoR);
+            this.panelConferencia.Controls.Add(this.numValorApurado);
+            this.panelConferencia.Controls.Add(this.btnConferirApuracao);
+            this.panelConferencia.Controls.Add(this.lblSituacaoConferencia);
+            this.Controls.Add(this.labelAviso);
+            this.Name = "ApuracaoControl";
+            this.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
+            this.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Size = new System.Drawing.Size(1050, 720);
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(970, 690);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconeTela)).EndInit();
+            this.panelCorpo.ResumeLayout(false);
+            this.panelCorpo.PerformLayout();
+            this.panelFiltrosApuracao.ResumeLayout(false);
+            this.panelFiltrosApuracao.PerformLayout();
+            this.panelDetalheApuracao.ResumeLayout(false);
+            this.panelDetalheApuracao.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApuracao)).EndInit();
+            this.panelConferencia.ResumeLayout(false);
+            this.panelConferencia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numValorApurado)).EndInit();
+            this.cmbSetorApuracao.SelectedIndexChanged += new System.EventHandler(this.Filtros_Changed);
+            this.cmbTurnoApuracao.SelectedIndexChanged += new System.EventHandler(this.Filtros_Changed);
+            this.dtpApuracao.ValueChanged += new System.EventHandler(this.Filtros_Changed);
+            this.btnConferirApuracao.Click += new System.EventHandler(this.btnConferirApuracao_Click);
+            this.ResumeLayout(false);
+        }
+        #endregion
+
+        private System.Windows.Forms.PictureBox pictureIconeTela;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblSubtitulo;
+        private System.Windows.Forms.Panel panelCorpo;
+        private System.Windows.Forms.Panel panelFiltrosApuracao;
+        private System.Windows.Forms.Label lblSetor;
+        private System.Windows.Forms.ComboBox cmbSetorApuracao;
+        private System.Windows.Forms.Label lblTurno;
+        private System.Windows.Forms.ComboBox cmbTurnoApuracao;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.DateTimePicker dtpApuracao;
+        private System.Windows.Forms.Panel panelDetalheApuracao;
+        private System.Windows.Forms.DataGridView dgvApuracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApuracaoFuncionario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApuracaoSetor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApuracaoTurno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApuracaoItensvendidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApuracaoTotalregistrado;
+        private System.Windows.Forms.Panel panelConferencia;
+        private System.Windows.Forms.Label lblTotalregistradoexemplo;
+        private System.Windows.Forms.Label lblValorConferencia;
+        private System.Windows.Forms.Label lblValorapuradoinformadoR;
+        private System.Windows.Forms.NumericUpDown numValorApurado;
+        private System.Windows.Forms.Button btnConferirApuracao;
+        private System.Windows.Forms.Label lblSituacaoConferencia;
+        private System.Windows.Forms.Label labelAviso;
+    }
+}

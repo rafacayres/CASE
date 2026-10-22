@@ -118,6 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="package(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\package(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sem título2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sem título2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="triangle-alert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\triangle-alert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="package-plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\package-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="package-minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\package-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="layout-dashboard(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\layout-dashboard(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,14 +151,8 @@
   <data name="Sem título4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sem título4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sem título2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sem título2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Fundo Tecnológico Azul com Logo CASE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo Tecnológico Azul com Logo CASE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="package(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="package" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\package.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,7 +199,106 @@
   <data name="Sem título3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sem título3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="triangle-alert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\triangle-alert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LucideDashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\layout-dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideQuermesses" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\tent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideEquipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\users-round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideEscala" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\calendar-clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideRegistros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\clipboard-list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideSolicitacoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\messages-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideProdutos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\package.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideEstoque" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\warehouse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideFinanceiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\wallet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideApuracao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\calculator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideConfiguracoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideSair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\log-out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucidePesquisa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideNotificacoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\circle-user-round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulDashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\layout-dashboard-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulQuermesses" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\tent-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulEquipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\users-round-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulEscala" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\calendar-clock-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulRegistros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\clipboard-list-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulSolicitacoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\messages-square-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulProdutos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\package-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulEstoque" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\warehouse-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulFinanceiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\wallet-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulApuracao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\calculator-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulConfiguracoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\settings-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulSair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\log-out-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulPesquisa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\search-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulNotificacoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\bell-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\circle-user-round-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulEntradas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\package-plus-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulSaidas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\package-minus-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulAlerta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\triangle-alert-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulImagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\image-plus-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

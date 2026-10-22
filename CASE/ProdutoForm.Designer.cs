@@ -1,0 +1,442 @@
+﻿namespace CASE
+{
+    partial class ProdutoForm
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && components != null) components.Dispose();
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+        private void InitializeComponent()
+        {
+            this.pictureIconeImagemProduto = new System.Windows.Forms.PictureBox();
+            this.pictureIconeFormulario = new System.Windows.Forms.PictureBox();
+            this.panelProduto = new System.Windows.Forms.Panel();
+            this.lblTituloProduto = new System.Windows.Forms.Label();
+            this.lblSubtituloProduto = new System.Windows.Forms.Label();
+            this.lblNomeProduto = new System.Windows.Forms.Label();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
+            this.lblCategoriaProduto = new System.Windows.Forms.Label();
+            this.cmbCategoriaProduto = new System.Windows.Forms.ComboBox();
+            this.lblFornecedorProduto = new System.Windows.Forms.Label();
+            this.cmbFornecedorProduto = new System.Windows.Forms.ComboBox();
+            this.lblQuantidadeInicial = new System.Windows.Forms.Label();
+            this.numQuantidadeInicial = new System.Windows.Forms.NumericUpDown();
+            this.lblEstoqueMinimo = new System.Windows.Forms.Label();
+            this.numEstoqueMinimo = new System.Windows.Forms.NumericUpDown();
+            this.lblEstoqueIdeal = new System.Windows.Forms.Label();
+            this.numEstoqueIdeal = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecoUnitario = new System.Windows.Forms.Label();
+            this.txtPrecoUnitario = new System.Windows.Forms.TextBox();
+            this.lblDescricaoProduto = new System.Windows.Forms.Label();
+            this.txtDescricaoProduto = new System.Windows.Forms.TextBox();
+            this.btnSalvarProduto = new System.Windows.Forms.Button();
+            this.btnCancelarProduto = new System.Windows.Forms.Button();
+            this.pictureImagemProduto = new System.Windows.Forms.PictureBox();
+            this.lblImagemdoproduto = new System.Windows.Forms.Label();
+            this.lblImagemdoproduto2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconeFormulario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconeImagemProduto)).BeginInit();
+            this.SuspendLayout();
+            this.panelProduto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantidadeInicial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEstoqueMinimo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEstoqueIdeal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureImagemProduto)).BeginInit();
+            // panelProduto
+            this.panelProduto.Name = "panelProduto";
+            this.panelProduto.Location = new System.Drawing.Point(16, 16);
+            this.panelProduto.Size = new System.Drawing.Size(868, 508);
+            this.panelProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.panelProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.panelProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.panelProduto.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0, 0);
+            this.panelProduto.TabIndex = 0;
+            // lblTituloProduto
+            this.lblTituloProduto.Name = "lblTituloProduto";
+            this.lblTituloProduto.Location = new System.Drawing.Point(30, 20);
+            this.lblTituloProduto.Size = new System.Drawing.Size(700, 36);
+            this.lblTituloProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblTituloProduto.Font = new System.Drawing.Font("Segoe UI", 20F, (System.Drawing.FontStyle)1);
+            this.lblTituloProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblTituloProduto.ForeColor = System.Drawing.Color.FromArgb(255, 16, 43, 73);
+            this.lblTituloProduto.TabIndex = 1;
+            this.lblTituloProduto.Text = "Cadastro de Produto";
+            this.lblTituloProduto.TextAlign = (System.Drawing.ContentAlignment)1;
+            // lblSubtituloProduto
+            this.lblSubtituloProduto.Name = "lblSubtituloProduto";
+            this.lblSubtituloProduto.Location = new System.Drawing.Point(30, 62);
+            this.lblSubtituloProduto.Size = new System.Drawing.Size(700, 24);
+            this.lblSubtituloProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblSubtituloProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.lblSubtituloProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblSubtituloProduto.ForeColor = System.Drawing.Color.FromArgb(255, 100, 116, 139);
+            this.lblSubtituloProduto.TabIndex = 2;
+            this.lblSubtituloProduto.Text = "Informações e imagem do produto";
+            this.lblSubtituloProduto.TextAlign = (System.Drawing.ContentAlignment)1;
+            // lblNomeProduto
+            this.lblNomeProduto.Name = "lblNomeProduto";
+            this.lblNomeProduto.Location = new System.Drawing.Point(236, 94);
+            this.lblNomeProduto.Size = new System.Drawing.Size(550, 22);
+            this.lblNomeProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblNomeProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.lblNomeProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblNomeProduto.ForeColor = System.Drawing.Color.FromArgb(255, 18, 47, 80);
+            this.lblNomeProduto.TabIndex = 3;
+            this.lblNomeProduto.Text = "Nome do produto";
+            this.lblNomeProduto.TextAlign = (System.Drawing.ContentAlignment)1;
+            // txtNomeProduto
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.Location = new System.Drawing.Point(236, 125);
+            this.txtNomeProduto.Size = new System.Drawing.Size(550, 25);
+            this.txtNomeProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.txtNomeProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.txtNomeProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.txtNomeProduto.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.txtNomeProduto.TabIndex = 4;
+            this.txtNomeProduto.Text = "";
+            this.txtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNomeProduto.Multiline = false;
+            this.txtNomeProduto.MaxLength = 32767;
+            // lblCategoriaProduto
+            this.lblCategoriaProduto.Name = "lblCategoriaProduto";
+            this.lblCategoriaProduto.Location = new System.Drawing.Point(236, 164);
+            this.lblCategoriaProduto.Size = new System.Drawing.Size(265, 22);
+            this.lblCategoriaProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblCategoriaProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.lblCategoriaProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblCategoriaProduto.ForeColor = System.Drawing.Color.FromArgb(255, 18, 47, 80);
+            this.lblCategoriaProduto.TabIndex = 5;
+            this.lblCategoriaProduto.Text = "Categoria";
+            this.lblCategoriaProduto.TextAlign = (System.Drawing.ContentAlignment)1;
+            // cmbCategoriaProduto
+            this.cmbCategoriaProduto.Name = "cmbCategoriaProduto";
+            this.cmbCategoriaProduto.Location = new System.Drawing.Point(230, 192);
+            this.cmbCategoriaProduto.Size = new System.Drawing.Size(265, 29);
+            this.cmbCategoriaProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.cmbCategoriaProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.cmbCategoriaProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.cmbCategoriaProduto.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.cmbCategoriaProduto.TabIndex = 6;
+            this.cmbCategoriaProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategoriaProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCategoriaProduto.Items.AddRange(new object[] { "Selecione uma categoria", "Bebidas", "Alimentação", "Doces", "Brincadeiras" });
+            this.cmbCategoriaProduto.SelectedIndex = 0;
+            // lblFornecedorProduto
+            this.lblFornecedorProduto.Name = "lblFornecedorProduto";
+            this.lblFornecedorProduto.Location = new System.Drawing.Point(521, 164);
+            this.lblFornecedorProduto.Size = new System.Drawing.Size(265, 22);
+            this.lblFornecedorProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblFornecedorProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.lblFornecedorProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblFornecedorProduto.ForeColor = System.Drawing.Color.FromArgb(255, 18, 47, 80);
+            this.lblFornecedorProduto.TabIndex = 7;
+            this.lblFornecedorProduto.Text = "Fornecedor";
+            this.lblFornecedorProduto.TextAlign = (System.Drawing.ContentAlignment)1;
+            // cmbFornecedorProduto
+            this.cmbFornecedorProduto.Name = "cmbFornecedorProduto";
+            this.cmbFornecedorProduto.Location = new System.Drawing.Point(515, 192);
+            this.cmbFornecedorProduto.Size = new System.Drawing.Size(272, 29);
+            this.cmbFornecedorProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.cmbFornecedorProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.cmbFornecedorProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.cmbFornecedorProduto.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.cmbFornecedorProduto.TabIndex = 8;
+            this.cmbFornecedorProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFornecedorProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbFornecedorProduto.Items.AddRange(new object[] { "Selecione o fornecedor", "Fornecedor de exemplo" });
+            this.cmbFornecedorProduto.SelectedIndex = 0;
+            // lblQuantidadeInicial
+            this.lblQuantidadeInicial.Name = "lblQuantidadeInicial";
+            this.lblQuantidadeInicial.Location = new System.Drawing.Point(236, 233);
+            this.lblQuantidadeInicial.Size = new System.Drawing.Size(130, 22);
+            this.lblQuantidadeInicial.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblQuantidadeInicial.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.lblQuantidadeInicial.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblQuantidadeInicial.ForeColor = System.Drawing.Color.FromArgb(255, 18, 47, 80);
+            this.lblQuantidadeInicial.TabIndex = 9;
+            this.lblQuantidadeInicial.Text = "Quantidade inicial";
+            this.lblQuantidadeInicial.TextAlign = (System.Drawing.ContentAlignment)1;
+            // numQuantidadeInicial
+            this.numQuantidadeInicial.Name = "numQuantidadeInicial";
+            this.numQuantidadeInicial.Location = new System.Drawing.Point(230, 260);
+            this.numQuantidadeInicial.Size = new System.Drawing.Size(130, 25);
+            this.numQuantidadeInicial.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.numQuantidadeInicial.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.numQuantidadeInicial.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.numQuantidadeInicial.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.numQuantidadeInicial.TabIndex = 10;
+            this.numQuantidadeInicial.Minimum = 0M;
+            this.numQuantidadeInicial.Maximum = 1000000M;
+            this.numQuantidadeInicial.Value = 0M;
+            this.numQuantidadeInicial.DecimalPlaces = 0;
+            this.numQuantidadeInicial.ThousandsSeparator = true;
+            // lblEstoqueMinimo
+            this.lblEstoqueMinimo.Name = "lblEstoqueMinimo";
+            this.lblEstoqueMinimo.Location = new System.Drawing.Point(376, 233);
+            this.lblEstoqueMinimo.Size = new System.Drawing.Size(130, 22);
+            this.lblEstoqueMinimo.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblEstoqueMinimo.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.lblEstoqueMinimo.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblEstoqueMinimo.ForeColor = System.Drawing.Color.FromArgb(255, 18, 47, 80);
+            this.lblEstoqueMinimo.TabIndex = 11;
+            this.lblEstoqueMinimo.Text = "Estoque mínimo";
+            this.lblEstoqueMinimo.TextAlign = (System.Drawing.ContentAlignment)1;
+            // numEstoqueMinimo
+            this.numEstoqueMinimo.Name = "numEstoqueMinimo";
+            this.numEstoqueMinimo.Location = new System.Drawing.Point(370, 260);
+            this.numEstoqueMinimo.Size = new System.Drawing.Size(130, 25);
+            this.numEstoqueMinimo.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.numEstoqueMinimo.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.numEstoqueMinimo.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.numEstoqueMinimo.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.numEstoqueMinimo.TabIndex = 12;
+            this.numEstoqueMinimo.Minimum = 0M;
+            this.numEstoqueMinimo.Maximum = 1000000M;
+            this.numEstoqueMinimo.Value = 0M;
+            this.numEstoqueMinimo.DecimalPlaces = 0;
+            this.numEstoqueMinimo.ThousandsSeparator = true;
+            // lblEstoqueIdeal
+            this.lblEstoqueIdeal.Name = "lblEstoqueIdeal";
+            this.lblEstoqueIdeal.Location = new System.Drawing.Point(516, 233);
+            this.lblEstoqueIdeal.Size = new System.Drawing.Size(130, 22);
+            this.lblEstoqueIdeal.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblEstoqueIdeal.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.lblEstoqueIdeal.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblEstoqueIdeal.ForeColor = System.Drawing.Color.FromArgb(255, 18, 47, 80);
+            this.lblEstoqueIdeal.TabIndex = 13;
+            this.lblEstoqueIdeal.Text = "Estoque ideal";
+            this.lblEstoqueIdeal.TextAlign = (System.Drawing.ContentAlignment)1;
+            // numEstoqueIdeal
+            this.numEstoqueIdeal.Name = "numEstoqueIdeal";
+            this.numEstoqueIdeal.Location = new System.Drawing.Point(510, 260);
+            this.numEstoqueIdeal.Size = new System.Drawing.Size(130, 25);
+            this.numEstoqueIdeal.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.numEstoqueIdeal.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.numEstoqueIdeal.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.numEstoqueIdeal.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.numEstoqueIdeal.TabIndex = 14;
+            this.numEstoqueIdeal.Minimum = 0M;
+            this.numEstoqueIdeal.Maximum = 1000000M;
+            this.numEstoqueIdeal.Value = 0M;
+            this.numEstoqueIdeal.DecimalPlaces = 0;
+            this.numEstoqueIdeal.ThousandsSeparator = true;
+            // lblPrecoUnitario
+            this.lblPrecoUnitario.Name = "lblPrecoUnitario";
+            this.lblPrecoUnitario.Location = new System.Drawing.Point(656, 233);
+            this.lblPrecoUnitario.Size = new System.Drawing.Size(130, 22);
+            this.lblPrecoUnitario.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblPrecoUnitario.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.lblPrecoUnitario.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblPrecoUnitario.ForeColor = System.Drawing.Color.FromArgb(255, 18, 47, 80);
+            this.lblPrecoUnitario.TabIndex = 15;
+            this.lblPrecoUnitario.Text = "Preço unitário";
+            this.lblPrecoUnitario.TextAlign = (System.Drawing.ContentAlignment)1;
+            // txtPrecoUnitario
+            this.txtPrecoUnitario.Name = "txtPrecoUnitario";
+            this.txtPrecoUnitario.Location = new System.Drawing.Point(656, 264);
+            this.txtPrecoUnitario.Size = new System.Drawing.Size(130, 25);
+            this.txtPrecoUnitario.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.txtPrecoUnitario.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.txtPrecoUnitario.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.txtPrecoUnitario.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.txtPrecoUnitario.TabIndex = 16;
+            this.txtPrecoUnitario.Text = "";
+            this.txtPrecoUnitario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrecoUnitario.Multiline = false;
+            this.txtPrecoUnitario.MaxLength = 32767;
+            // lblDescricaoProduto
+            this.lblDescricaoProduto.Name = "lblDescricaoProduto";
+            this.lblDescricaoProduto.Location = new System.Drawing.Point(236, 303);
+            this.lblDescricaoProduto.Size = new System.Drawing.Size(550, 22);
+            this.lblDescricaoProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblDescricaoProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.lblDescricaoProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.lblDescricaoProduto.ForeColor = System.Drawing.Color.FromArgb(255, 18, 47, 80);
+            this.lblDescricaoProduto.TabIndex = 17;
+            this.lblDescricaoProduto.Text = "Descrição";
+            this.lblDescricaoProduto.TextAlign = (System.Drawing.ContentAlignment)1;
+            // txtDescricaoProduto
+            this.txtDescricaoProduto.Name = "txtDescricaoProduto";
+            this.txtDescricaoProduto.Location = new System.Drawing.Point(236, 334);
+            this.txtDescricaoProduto.Size = new System.Drawing.Size(550, 64);
+            this.txtDescricaoProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.txtDescricaoProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.txtDescricaoProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.txtDescricaoProduto.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.txtDescricaoProduto.TabIndex = 18;
+            this.txtDescricaoProduto.Text = "";
+            this.txtDescricaoProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescricaoProduto.Multiline = true;
+            this.txtDescricaoProduto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDescricaoProduto.MaxLength = 32767;
+            // btnSalvarProduto
+            this.btnSalvarProduto.Name = "btnSalvarProduto";
+            this.btnSalvarProduto.Location = new System.Drawing.Point(716, 446);
+            this.btnSalvarProduto.Size = new System.Drawing.Size(110, 38);
+            this.btnSalvarProduto.Anchor = (System.Windows.Forms.AnchorStyles)9;
+            this.btnSalvarProduto.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)1);
+            this.btnSalvarProduto.BackColor = System.Drawing.Color.FromArgb(255, 23, 105, 210);
+            this.btnSalvarProduto.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.btnSalvarProduto.TabIndex = 19;
+            this.btnSalvarProduto.Text = "Salvar";
+            this.btnSalvarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarProduto.FlatAppearance.BorderSize = 0;
+            this.btnSalvarProduto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 228, 234, 242);
+            this.btnSalvarProduto.UseVisualStyleBackColor = false;
+            this.btnSalvarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarProduto.DialogResult = (System.Windows.Forms.DialogResult)0;
+            // btnCancelarProduto
+            this.btnCancelarProduto.Name = "btnCancelarProduto";
+            this.btnCancelarProduto.Location = new System.Drawing.Point(590, 446);
+            this.btnCancelarProduto.Size = new System.Drawing.Size(110, 38);
+            this.btnCancelarProduto.Anchor = (System.Windows.Forms.AnchorStyles)9;
+            this.btnCancelarProduto.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)0);
+            this.btnCancelarProduto.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            this.btnCancelarProduto.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.btnCancelarProduto.TabIndex = 20;
+            this.btnCancelarProduto.Text = "Cancelar";
+            this.btnCancelarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarProduto.FlatAppearance.BorderSize = 1;
+            this.btnCancelarProduto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 228, 234, 242);
+            this.btnCancelarProduto.UseVisualStyleBackColor = false;
+            this.btnCancelarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarProduto.DialogResult = (System.Windows.Forms.DialogResult)2;
+            // pictureImagemProduto
+            this.pictureImagemProduto.Name = "pictureImagemProduto";
+            this.pictureImagemProduto.Location = new System.Drawing.Point(30, 120);
+            this.pictureImagemProduto.Size = new System.Drawing.Size(170, 200);
+            this.pictureImagemProduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.pictureImagemProduto.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.pictureImagemProduto.BackColor = System.Drawing.Color.FromArgb(255, 242, 246, 251);
+            this.pictureImagemProduto.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0, 0);
+            this.pictureImagemProduto.TabIndex = 21;
+            this.pictureImagemProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureImagemProduto.TabStop = false;
+            // lblImagemdoproduto
+            this.lblImagemdoproduto.Name = "lblImagemdoproduto";
+            this.lblImagemdoproduto.Location = new System.Drawing.Point(30, 94);
+            this.lblImagemdoproduto.Size = new System.Drawing.Size(170, 22);
+            this.lblImagemdoproduto.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblImagemdoproduto.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
+            this.lblImagemdoproduto.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
+            this.lblImagemdoproduto.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
+            this.lblImagemdoproduto.TabIndex = 22;
+            this.lblImagemdoproduto.Text = "Imagem do produto";
+            this.lblImagemdoproduto.TextAlign = (System.Drawing.ContentAlignment)1;
+            // lblImagemdoproduto2
+            this.lblImagemdoproduto2.Name = "lblImagemdoproduto2";
+            this.lblImagemdoproduto2.Location = new System.Drawing.Point(44, 205);
+            this.lblImagemdoproduto2.Size = new System.Drawing.Size(144, 24);
+            this.lblImagemdoproduto2.Anchor = (System.Windows.Forms.AnchorStyles)5;
+            this.lblImagemdoproduto2.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
+            this.lblImagemdoproduto2.BackColor = System.Drawing.Color.FromArgb(255, 242, 246, 251);
+            this.lblImagemdoproduto2.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
+            this.lblImagemdoproduto2.TabIndex = 23;
+            this.lblImagemdoproduto2.Text = "Imagem do produto";
+            this.lblImagemdoproduto2.TextAlign = (System.Drawing.ContentAlignment)1;
+            this.Controls.Add(this.panelProduto);
+            this.panelProduto.Controls.Add(this.lblTituloProduto);
+            this.panelProduto.Controls.Add(this.lblSubtituloProduto);
+            this.panelProduto.Controls.Add(this.lblNomeProduto);
+            this.panelProduto.Controls.Add(this.txtNomeProduto);
+            this.panelProduto.Controls.Add(this.lblCategoriaProduto);
+            this.panelProduto.Controls.Add(this.cmbCategoriaProduto);
+            this.panelProduto.Controls.Add(this.lblFornecedorProduto);
+            this.panelProduto.Controls.Add(this.cmbFornecedorProduto);
+            this.panelProduto.Controls.Add(this.lblQuantidadeInicial);
+            this.panelProduto.Controls.Add(this.numQuantidadeInicial);
+            this.panelProduto.Controls.Add(this.lblEstoqueMinimo);
+            this.panelProduto.Controls.Add(this.numEstoqueMinimo);
+            this.panelProduto.Controls.Add(this.lblEstoqueIdeal);
+            this.panelProduto.Controls.Add(this.numEstoqueIdeal);
+            this.panelProduto.Controls.Add(this.lblPrecoUnitario);
+            this.panelProduto.Controls.Add(this.txtPrecoUnitario);
+            this.panelProduto.Controls.Add(this.lblDescricaoProduto);
+            this.panelProduto.Controls.Add(this.txtDescricaoProduto);
+            this.panelProduto.Controls.Add(this.btnSalvarProduto);
+            this.panelProduto.Controls.Add(this.btnCancelarProduto);
+            this.panelProduto.Controls.Add(this.pictureImagemProduto);
+            this.panelProduto.Controls.Add(this.lblImagemdoproduto);
+            this.panelProduto.Controls.Add(this.lblImagemdoproduto2);
+            this.Name = "ProdutoForm";
+            this.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
+            this.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
+            this.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0, 0);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Text = "CASE - Produto";
+            this.ClientSize = new System.Drawing.Size(900, 540);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.CancelButton = this.btnCancelarProduto;
+            this.panelProduto.ResumeLayout(false);
+            this.panelProduto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantidadeInicial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEstoqueMinimo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEstoqueIdeal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureImagemProduto)).EndInit();
+            this.btnSalvarProduto.Click += new System.EventHandler(this.btnSalvarProduto_Click);
+            // pictureIconeFormulario — Lucide
+            this.pictureIconeFormulario.Name = "pictureIconeFormulario";
+            this.pictureIconeFormulario.Image = global::CASE.Properties.Resources.LucideAzulProdutos;
+            this.pictureIconeFormulario.Location = new System.Drawing.Point(790, 22);
+            this.pictureIconeFormulario.Size = new System.Drawing.Size(36, 36);
+            this.pictureIconeFormulario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIconeFormulario.BackColor = System.Drawing.Color.FromArgb(232, 240, 252);
+            this.pictureIconeFormulario.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left;
+            this.pictureIconeFormulario.TabStop = false;
+            this.pictureIconeFormulario.Enabled = false;
+            this.panelProduto.Controls.Add(this.pictureIconeFormulario);
+            this.pictureIconeFormulario.BringToFront();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconeFormulario)).EndInit();
+            // pictureIconeImagemProduto — Lucide
+            this.pictureIconeImagemProduto.Name = "pictureIconeImagemProduto";
+            this.pictureIconeImagemProduto.Image = global::CASE.Properties.Resources.LucideAzulImagem;
+            this.pictureIconeImagemProduto.Location = new System.Drawing.Point(69, 84);
+            this.pictureIconeImagemProduto.Size = new System.Drawing.Size(32, 32);
+            this.pictureIconeImagemProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIconeImagemProduto.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIconeImagemProduto.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left;
+            this.pictureIconeImagemProduto.TabStop = false;
+            this.pictureIconeImagemProduto.Enabled = false;
+            this.pictureImagemProduto.Controls.Add(this.pictureIconeImagemProduto);
+            this.pictureIconeImagemProduto.BringToFront();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconeImagemProduto)).EndInit();
+            this.ResumeLayout(false);
+        }
+        #endregion
+
+        private System.Windows.Forms.Panel panelProduto;
+        private System.Windows.Forms.Label lblTituloProduto;
+        private System.Windows.Forms.Label lblSubtituloProduto;
+        private System.Windows.Forms.Label lblNomeProduto;
+        private System.Windows.Forms.TextBox txtNomeProduto;
+        private System.Windows.Forms.Label lblCategoriaProduto;
+        private System.Windows.Forms.ComboBox cmbCategoriaProduto;
+        private System.Windows.Forms.Label lblFornecedorProduto;
+        private System.Windows.Forms.ComboBox cmbFornecedorProduto;
+        private System.Windows.Forms.Label lblQuantidadeInicial;
+        private System.Windows.Forms.NumericUpDown numQuantidadeInicial;
+        private System.Windows.Forms.Label lblEstoqueMinimo;
+        private System.Windows.Forms.NumericUpDown numEstoqueMinimo;
+        private System.Windows.Forms.Label lblEstoqueIdeal;
+        private System.Windows.Forms.NumericUpDown numEstoqueIdeal;
+        private System.Windows.Forms.Label lblPrecoUnitario;
+        private System.Windows.Forms.TextBox txtPrecoUnitario;
+        private System.Windows.Forms.Label lblDescricaoProduto;
+        private System.Windows.Forms.TextBox txtDescricaoProduto;
+        private System.Windows.Forms.Button btnSalvarProduto;
+        private System.Windows.Forms.Button btnCancelarProduto;
+        private System.Windows.Forms.PictureBox pictureImagemProduto;
+        private System.Windows.Forms.Label lblImagemdoproduto;
+        private System.Windows.Forms.Label lblImagemdoproduto2;
+        private System.Windows.Forms.PictureBox pictureIconeFormulario;
+        private System.Windows.Forms.PictureBox pictureIconeImagemProduto;
+    }
+}

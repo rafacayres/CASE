@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -91,9 +91,153 @@
     <Compile Include="ProdutosControl.Designer.cs">
       <DependentUpon>ProdutosControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstoqueControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EstoqueControl.Designer.cs">
+      <DependentUpon>EstoqueControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovimentacoesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovimentacoesControl.Designer.cs">
+      <DependentUpon>MovimentacoesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelatoriosControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RelatoriosControl.Designer.cs">
+      <DependentUpon>RelatoriosControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfiguracoesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfiguracoesControl.Designer.cs">
+      <DependentUpon>ConfiguracoesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdutoForm.Designer.cs">
+      <DependentUpon>ProdutoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\VisualUtils.cs" />
+    <Compile Include="Utils\FrontendTheme.cs" />
+    <Compile Include="Quermesse\PessoaSetorForm.Designer.cs">
+      <DependentUpon>PessoaSetorForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\PessoaSetorForm.resx">
+      <DependentUpon>PessoaSetorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\PessoaSetorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quermesse\SolicitacaoForm.Designer.cs">
+      <DependentUpon>SolicitacaoForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\SolicitacaoForm.resx">
+      <DependentUpon>SolicitacaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\SolicitacaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quermesse\EscalaForm.Designer.cs">
+      <DependentUpon>EscalaForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\EscalaForm.resx">
+      <DependentUpon>EscalaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\EscalaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quermesse\QuermesseForm.Designer.cs">
+      <DependentUpon>QuermesseForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\QuermesseForm.resx">
+      <DependentUpon>QuermesseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\QuermesseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quermesse\ApuracaoControl.Designer.cs">
+      <DependentUpon>ApuracaoControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\ApuracaoControl.resx">
+      <DependentUpon>ApuracaoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\ApuracaoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quermesse\SolicitacoesControl.Designer.cs">
+      <DependentUpon>SolicitacoesControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\SolicitacoesControl.resx">
+      <DependentUpon>SolicitacoesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\SolicitacoesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quermesse\EscalaControl.Designer.cs">
+      <DependentUpon>EscalaControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\EscalaControl.resx">
+      <DependentUpon>EscalaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\EscalaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quermesse\QuermessesControl.Designer.cs">
+      <DependentUpon>QuermessesControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\QuermessesControl.resx">
+      <DependentUpon>QuermessesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\QuermessesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quermesse\QuermessePreview.cs" />
+    <Compile Include="Quermesse\RegistrosControl.Designer.cs">
+      <DependentUpon>RegistrosControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\RegistrosControl.resx">
+      <DependentUpon>RegistrosControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\RegistrosControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quermesse\QuermesseDashboardControl.Designer.cs">
+      <DependentUpon>QuermesseDashboardControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\QuermesseDashboardControl.resx">
+      <DependentUpon>QuermesseDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\QuermesseDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quermesse\EquipeSetoresControl.Designer.cs">
+      <DependentUpon>EquipeSetoresControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\EquipeSetoresControl.resx">
+      <DependentUpon>EquipeSetoresControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\EquipeSetoresControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quermesse\FinanceiroControl.Designer.cs">
+      <DependentUpon>FinanceiroControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quermesse\FinanceiroControl.resx">
+      <DependentUpon>FinanceiroControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Quermesse\FinanceiroControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+
+    <Compile Include="Utils\GraficoPreview.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="CadastroForm.resx">
       <DependentUpon>CadastroForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +249,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutoForm.resx">
+      <DependentUpon>ProdutoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosControl.resx">
+      <DependentUpon>ProdutosControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -142,6 +292,21 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Sem título2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle-alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\logo1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -155,9 +320,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sem título1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sem título2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sem título3.png" />
@@ -211,10 +373,12 @@
     <None Include="Resources\package1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\package%282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\triangle-alert.png" />
+    <None Include="Resources\Lucide\*.svg" />
+    <None Include="Resources\Lucide\*.png" />
+    <None Include="Resources\Lucide\README.md" />
+    <Content Include="Resources\Lucide\LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

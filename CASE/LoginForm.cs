@@ -16,6 +16,14 @@ namespace CASE
             InitializeComponent();
 
             VisualUtils.Arredondar(panelLogin, 15);
+            // Navegação visual de demonstração, sem autenticação.
+            btnEntrar.Click += (s, e) =>
+            {
+                Hide();
+                using (var principal = new PrincipalForm()) principal.ShowDialog(this);
+                Show();
+            };
+            AcceptButton = btnEntrar;
             VisualUtils.Arredondar(btnEntrar, 7);
 
             VisualUtils.Arredondar(panelUsuario, 7);
