@@ -204,5 +204,8 @@
   <ItemGroup>
     <None Include="Resources\package%282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle-alert.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

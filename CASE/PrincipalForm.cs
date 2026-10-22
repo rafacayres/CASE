@@ -28,6 +28,7 @@ namespace CASE
 
             VisualUtils.Arredondar(panelPesquisa, 12);
             VisualUtils.Arredondar(panelTotalProdutos, 12);
+            VisualUtils.Arredondar(panelEstoqueBaixo, 12);
         }
 
         private void textPesquisa_Leave(object sender, EventArgs e)

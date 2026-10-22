@@ -15,6 +15,13 @@ namespace CASE
         public DashboardControl()
         {
             InitializeComponent();
+            // Arredondar novos componentes conforme especificado
+            CASE.Utils.VisualUtils.Arredondar(panelEntradasMes, 12);
+            CASE.Utils.VisualUtils.Arredondar(panelSaidasMes, 12);
+            CASE.Utils.VisualUtils.Arredondar(panelIconeEntradas, 10);
+            CASE.Utils.VisualUtils.Arredondar(panelIconeSaidas, 10);
+            CASE.Utils.VisualUtils.Arredondar(panelGraficoMovimentacoes, 12);
+            CASE.Utils.VisualUtils.Arredondar(panelMovimentacoesRecentes, 12);
         }
     }
 }

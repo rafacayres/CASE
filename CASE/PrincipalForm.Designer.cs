@@ -30,15 +30,30 @@
         {
             this.panelCabecalho = new System.Windows.Forms.Panel();
             this.panelPerfil = new System.Windows.Forms.Panel();
-            this.pictureNotificacoes = new System.Windows.Forms.PictureBox();
             this.labelTipoUsuario = new System.Windows.Forms.Label();
             this.labelNomeUsuario = new System.Windows.Forms.Label();
-            this.pictureUsuario = new System.Windows.Forms.PictureBox();
             this.panelPesquisa = new System.Windows.Forms.Panel();
-            this.picturePesquisa = new System.Windows.Forms.PictureBox();
             this.textPesquisa = new System.Windows.Forms.TextBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelRodapeMenu = new System.Windows.Forms.Panel();
+            this.panelConteudo = new System.Windows.Forms.Panel();
+            this.panelTotalProdutos = new System.Windows.Forms.Panel();
+            this.panelIconeProdutos = new System.Windows.Forms.Panel();
+            this.lblTotalProdutosValor = new System.Windows.Forms.Label();
+            this.lblTotalProdutosTitulo = new System.Windows.Forms.Label();
+            this.lblSubtituloDashboard = new System.Windows.Forms.Label();
+            this.lblTituloDashboard = new System.Windows.Forms.Label();
+            this.dashboardControl1 = new CASE.DashboardControl();
+            this.panelAreaPrincipal = new System.Windows.Forms.Panel();
+            this.panelEstoqueBaixo = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picIconeProdutos = new System.Windows.Forms.PictureBox();
+            this.pictureNotificacoes = new System.Windows.Forms.PictureBox();
+            this.pictureUsuario = new System.Windows.Forms.PictureBox();
+            this.picturePesquisa = new System.Windows.Forms.PictureBox();
             this.buttonSair = new System.Windows.Forms.Button();
             this.buttonConfiguracoes = new System.Windows.Forms.Button();
             this.buttonRelatorios = new System.Windows.Forms.Button();
@@ -47,30 +62,23 @@
             this.buttonProdutos = new System.Windows.Forms.Button();
             this.buttonDashboard = new System.Windows.Forms.Button();
             this.pictureLogoMenu = new System.Windows.Forms.PictureBox();
-            this.panelConteudo = new System.Windows.Forms.Panel();
-            this.panelTotalProdutos = new System.Windows.Forms.Panel();
-            this.panelIconeProdutos = new System.Windows.Forms.Panel();
-            this.picIconeProdutos = new System.Windows.Forms.PictureBox();
-            this.lblTotalProdutosValor = new System.Windows.Forms.Label();
-            this.lblTotalProdutosTitulo = new System.Windows.Forms.Label();
-            this.lblSubtituloDashboard = new System.Windows.Forms.Label();
-            this.lblTituloDashboard = new System.Windows.Forms.Label();
-            this.dashboardControl1 = new CASE.DashboardControl();
-            this.panelAreaPrincipal = new System.Windows.Forms.Panel();
             this.panelCabecalho.SuspendLayout();
             this.panelPerfil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureNotificacoes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).BeginInit();
             this.panelPesquisa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePesquisa)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelRodapeMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoMenu)).BeginInit();
             this.panelConteudo.SuspendLayout();
             this.panelTotalProdutos.SuspendLayout();
             this.panelIconeProdutos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picIconeProdutos)).BeginInit();
             this.panelAreaPrincipal.SuspendLayout();
+            this.panelEstoqueBaixo.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconeProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureNotificacoes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePesquisa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCabecalho
@@ -96,16 +104,6 @@
             this.panelPerfil.Size = new System.Drawing.Size(230, 70);
             this.panelPerfil.TabIndex = 1;
             // 
-            // pictureNotificacoes
-            // 
-            this.pictureNotificacoes.Image = global::CASE.Properties.Resources.bell_1_;
-            this.pictureNotificacoes.Location = new System.Drawing.Point(35, 23);
-            this.pictureNotificacoes.Name = "pictureNotificacoes";
-            this.pictureNotificacoes.Size = new System.Drawing.Size(24, 24);
-            this.pictureNotificacoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureNotificacoes.TabIndex = 3;
-            this.pictureNotificacoes.TabStop = false;
-            // 
             // labelTipoUsuario
             // 
             this.labelTipoUsuario.AutoSize = true;
@@ -128,16 +126,6 @@
             this.labelNomeUsuario.TabIndex = 1;
             this.labelNomeUsuario.Text = "Administrador";
             // 
-            // pictureUsuario
-            // 
-            this.pictureUsuario.Image = global::CASE.Properties.Resources.Sem_título4;
-            this.pictureUsuario.Location = new System.Drawing.Point(82, 17);
-            this.pictureUsuario.Name = "pictureUsuario";
-            this.pictureUsuario.Size = new System.Drawing.Size(36, 36);
-            this.pictureUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureUsuario.TabIndex = 0;
-            this.pictureUsuario.TabStop = false;
-            // 
             // panelPesquisa
             // 
             this.panelPesquisa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
@@ -147,16 +135,6 @@
             this.panelPesquisa.Name = "panelPesquisa";
             this.panelPesquisa.Size = new System.Drawing.Size(260, 40);
             this.panelPesquisa.TabIndex = 0;
-            // 
-            // picturePesquisa
-            // 
-            this.picturePesquisa.Image = global::CASE.Properties.Resources.search;
-            this.picturePesquisa.Location = new System.Drawing.Point(12, 10);
-            this.picturePesquisa.Name = "picturePesquisa";
-            this.picturePesquisa.Size = new System.Drawing.Size(20, 20);
-            this.picturePesquisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picturePesquisa.TabIndex = 1;
-            this.picturePesquisa.TabStop = false;
             // 
             // textPesquisa
             // 
@@ -195,6 +173,194 @@
             this.panelRodapeMenu.Name = "panelRodapeMenu";
             this.panelRodapeMenu.Size = new System.Drawing.Size(230, 115);
             this.panelRodapeMenu.TabIndex = 7;
+            // 
+            // panelConteudo
+            // 
+            this.panelConteudo.Controls.Add(this.panelEstoqueBaixo);
+            this.panelConteudo.Controls.Add(this.panelTotalProdutos);
+            this.panelConteudo.Controls.Add(this.lblSubtituloDashboard);
+            this.panelConteudo.Controls.Add(this.lblTituloDashboard);
+            this.panelConteudo.Controls.Add(this.dashboardControl1);
+            this.panelConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelConteudo.Location = new System.Drawing.Point(0, 70);
+            this.panelConteudo.Name = "panelConteudo";
+            this.panelConteudo.Size = new System.Drawing.Size(954, 641);
+            this.panelConteudo.TabIndex = 2;
+            // 
+            // panelTotalProdutos
+            // 
+            this.panelTotalProdutos.BackColor = System.Drawing.Color.White;
+            this.panelTotalProdutos.Controls.Add(this.panelIconeProdutos);
+            this.panelTotalProdutos.Controls.Add(this.lblTotalProdutosValor);
+            this.panelTotalProdutos.Controls.Add(this.lblTotalProdutosTitulo);
+            this.panelTotalProdutos.Location = new System.Drawing.Point(30, 115);
+            this.panelTotalProdutos.Name = "panelTotalProdutos";
+            this.panelTotalProdutos.Size = new System.Drawing.Size(230, 120);
+            this.panelTotalProdutos.TabIndex = 3;
+            // 
+            // panelIconeProdutos
+            // 
+            this.panelIconeProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.panelIconeProdutos.Controls.Add(this.picIconeProdutos);
+            this.panelIconeProdutos.Location = new System.Drawing.Point(177, 12);
+            this.panelIconeProdutos.Name = "panelIconeProdutos";
+            this.panelIconeProdutos.Size = new System.Drawing.Size(40, 40);
+            this.panelIconeProdutos.TabIndex = 2;
+            // 
+            // lblTotalProdutosValor
+            // 
+            this.lblTotalProdutosValor.AutoSize = true;
+            this.lblTotalProdutosValor.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalProdutosValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(47)))), ((int)(((byte)(80)))));
+            this.lblTotalProdutosValor.Location = new System.Drawing.Point(15, 52);
+            this.lblTotalProdutosValor.Name = "lblTotalProdutosValor";
+            this.lblTotalProdutosValor.Size = new System.Drawing.Size(74, 45);
+            this.lblTotalProdutosValor.TabIndex = 1;
+            this.lblTotalProdutosValor.Text = "128";
+            // 
+            // lblTotalProdutosTitulo
+            // 
+            this.lblTotalProdutosTitulo.AutoSize = true;
+            this.lblTotalProdutosTitulo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblTotalProdutosTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.lblTotalProdutosTitulo.Location = new System.Drawing.Point(15, 18);
+            this.lblTotalProdutosTitulo.Name = "lblTotalProdutosTitulo";
+            this.lblTotalProdutosTitulo.Size = new System.Drawing.Size(117, 19);
+            this.lblTotalProdutosTitulo.TabIndex = 0;
+            this.lblTotalProdutosTitulo.Text = "Total de produtos";
+            // 
+            // lblSubtituloDashboard
+            // 
+            this.lblSubtituloDashboard.AutoSize = true;
+            this.lblSubtituloDashboard.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblSubtituloDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.lblSubtituloDashboard.Location = new System.Drawing.Point(32, 65);
+            this.lblSubtituloDashboard.Name = "lblSubtituloDashboard";
+            this.lblSubtituloDashboard.Size = new System.Drawing.Size(174, 19);
+            this.lblSubtituloDashboard.TabIndex = 2;
+            this.lblSubtituloDashboard.Text = "Visão geral do seu estoque";
+            // 
+            // lblTituloDashboard
+            // 
+            this.lblTituloDashboard.AutoSize = true;
+            this.lblTituloDashboard.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(47)))), ((int)(((byte)(80)))));
+            this.lblTituloDashboard.Location = new System.Drawing.Point(30, 25);
+            this.lblTituloDashboard.Name = "lblTituloDashboard";
+            this.lblTituloDashboard.Size = new System.Drawing.Size(138, 32);
+            this.lblTituloDashboard.TabIndex = 1;
+            this.lblTituloDashboard.Text = "Dashboard";
+            // 
+            // dashboardControl1
+            // 
+            this.dashboardControl1.AutoScroll = true;
+            this.dashboardControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboardControl1.Location = new System.Drawing.Point(0, 0);
+            this.dashboardControl1.Name = "dashboardControl1";
+            this.dashboardControl1.Size = new System.Drawing.Size(954, 641);
+            this.dashboardControl1.TabIndex = 0;
+            // 
+            // panelAreaPrincipal
+            // 
+            this.panelAreaPrincipal.Controls.Add(this.panelConteudo);
+            this.panelAreaPrincipal.Controls.Add(this.panelCabecalho);
+            this.panelAreaPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAreaPrincipal.Location = new System.Drawing.Point(230, 0);
+            this.panelAreaPrincipal.Name = "panelAreaPrincipal";
+            this.panelAreaPrincipal.Size = new System.Drawing.Size(954, 711);
+            this.panelAreaPrincipal.TabIndex = 0;
+            // 
+            // panelEstoqueBaixo
+            // 
+            this.panelEstoqueBaixo.BackColor = System.Drawing.Color.White;
+            this.panelEstoqueBaixo.Controls.Add(this.panel2);
+            this.panelEstoqueBaixo.Controls.Add(this.label1);
+            this.panelEstoqueBaixo.Controls.Add(this.label2);
+            this.panelEstoqueBaixo.Location = new System.Drawing.Point(275, 115);
+            this.panelEstoqueBaixo.Name = "panelEstoqueBaixo";
+            this.panelEstoqueBaixo.Size = new System.Drawing.Size(230, 120);
+            this.panelEstoqueBaixo.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(177, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(40, 40);
+            this.panel2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(47)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(15, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 45);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "128";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.label2.Location = new System.Drawing.Point(15, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Total de produtos";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CASE.Properties.Resources.triangle_alert;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picIconeProdutos
+            // 
+            this.picIconeProdutos.Image = global::CASE.Properties.Resources.package_2_;
+            this.picIconeProdutos.Location = new System.Drawing.Point(8, 8);
+            this.picIconeProdutos.Name = "picIconeProdutos";
+            this.picIconeProdutos.Size = new System.Drawing.Size(24, 24);
+            this.picIconeProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picIconeProdutos.TabIndex = 0;
+            this.picIconeProdutos.TabStop = false;
+            // 
+            // pictureNotificacoes
+            // 
+            this.pictureNotificacoes.Image = global::CASE.Properties.Resources.bell_1_;
+            this.pictureNotificacoes.Location = new System.Drawing.Point(35, 23);
+            this.pictureNotificacoes.Name = "pictureNotificacoes";
+            this.pictureNotificacoes.Size = new System.Drawing.Size(24, 24);
+            this.pictureNotificacoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureNotificacoes.TabIndex = 3;
+            this.pictureNotificacoes.TabStop = false;
+            // 
+            // pictureUsuario
+            // 
+            this.pictureUsuario.Image = global::CASE.Properties.Resources.Sem_título4;
+            this.pictureUsuario.Location = new System.Drawing.Point(82, 17);
+            this.pictureUsuario.Name = "pictureUsuario";
+            this.pictureUsuario.Size = new System.Drawing.Size(36, 36);
+            this.pictureUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureUsuario.TabIndex = 0;
+            this.pictureUsuario.TabStop = false;
+            // 
+            // picturePesquisa
+            // 
+            this.picturePesquisa.Image = global::CASE.Properties.Resources.search;
+            this.picturePesquisa.Location = new System.Drawing.Point(12, 10);
+            this.picturePesquisa.Name = "picturePesquisa";
+            this.picturePesquisa.Size = new System.Drawing.Size(20, 20);
+            this.picturePesquisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturePesquisa.TabIndex = 1;
+            this.picturePesquisa.TabStop = false;
             // 
             // buttonSair
             // 
@@ -342,111 +508,6 @@
             this.pictureLogoMenu.TabIndex = 0;
             this.pictureLogoMenu.TabStop = false;
             // 
-            // panelConteudo
-            // 
-            this.panelConteudo.Controls.Add(this.panelTotalProdutos);
-            this.panelConteudo.Controls.Add(this.lblSubtituloDashboard);
-            this.panelConteudo.Controls.Add(this.lblTituloDashboard);
-            this.panelConteudo.Controls.Add(this.dashboardControl1);
-            this.panelConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConteudo.Location = new System.Drawing.Point(0, 70);
-            this.panelConteudo.Name = "panelConteudo";
-            this.panelConteudo.Size = new System.Drawing.Size(954, 641);
-            this.panelConteudo.TabIndex = 2;
-            // 
-            // panelTotalProdutos
-            // 
-            this.panelTotalProdutos.BackColor = System.Drawing.Color.White;
-            this.panelTotalProdutos.Controls.Add(this.panelIconeProdutos);
-            this.panelTotalProdutos.Controls.Add(this.lblTotalProdutosValor);
-            this.panelTotalProdutos.Controls.Add(this.lblTotalProdutosTitulo);
-            this.panelTotalProdutos.Location = new System.Drawing.Point(30, 115);
-            this.panelTotalProdutos.Name = "panelTotalProdutos";
-            this.panelTotalProdutos.Size = new System.Drawing.Size(230, 120);
-            this.panelTotalProdutos.TabIndex = 3;
-            // 
-            // panelIconeProdutos
-            // 
-            this.panelIconeProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.panelIconeProdutos.Controls.Add(this.picIconeProdutos);
-            this.panelIconeProdutos.Location = new System.Drawing.Point(177, 12);
-            this.panelIconeProdutos.Name = "panelIconeProdutos";
-            this.panelIconeProdutos.Size = new System.Drawing.Size(40, 40);
-            this.panelIconeProdutos.TabIndex = 2;
-            // 
-            // picIconeProdutos
-            // 
-            this.picIconeProdutos.Image = global::CASE.Properties.Resources.package_2_;
-            this.picIconeProdutos.Location = new System.Drawing.Point(8, 8);
-            this.picIconeProdutos.Name = "picIconeProdutos";
-            this.picIconeProdutos.Size = new System.Drawing.Size(24, 24);
-            this.picIconeProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picIconeProdutos.TabIndex = 0;
-            this.picIconeProdutos.TabStop = false;
-            // 
-            // lblTotalProdutosValor
-            // 
-            this.lblTotalProdutosValor.AutoSize = true;
-            this.lblTotalProdutosValor.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalProdutosValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(47)))), ((int)(((byte)(80)))));
-            this.lblTotalProdutosValor.Location = new System.Drawing.Point(15, 52);
-            this.lblTotalProdutosValor.Name = "lblTotalProdutosValor";
-            this.lblTotalProdutosValor.Size = new System.Drawing.Size(74, 45);
-            this.lblTotalProdutosValor.TabIndex = 1;
-            this.lblTotalProdutosValor.Text = "128";
-            // 
-            // lblTotalProdutosTitulo
-            // 
-            this.lblTotalProdutosTitulo.AutoSize = true;
-            this.lblTotalProdutosTitulo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTotalProdutosTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.lblTotalProdutosTitulo.Location = new System.Drawing.Point(15, 18);
-            this.lblTotalProdutosTitulo.Name = "lblTotalProdutosTitulo";
-            this.lblTotalProdutosTitulo.Size = new System.Drawing.Size(117, 19);
-            this.lblTotalProdutosTitulo.TabIndex = 0;
-            this.lblTotalProdutosTitulo.Text = "Total de produtos";
-            // 
-            // lblSubtituloDashboard
-            // 
-            this.lblSubtituloDashboard.AutoSize = true;
-            this.lblSubtituloDashboard.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblSubtituloDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.lblSubtituloDashboard.Location = new System.Drawing.Point(32, 65);
-            this.lblSubtituloDashboard.Name = "lblSubtituloDashboard";
-            this.lblSubtituloDashboard.Size = new System.Drawing.Size(174, 19);
-            this.lblSubtituloDashboard.TabIndex = 2;
-            this.lblSubtituloDashboard.Text = "Visão geral do seu estoque";
-            // 
-            // lblTituloDashboard
-            // 
-            this.lblTituloDashboard.AutoSize = true;
-            this.lblTituloDashboard.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(47)))), ((int)(((byte)(80)))));
-            this.lblTituloDashboard.Location = new System.Drawing.Point(30, 25);
-            this.lblTituloDashboard.Name = "lblTituloDashboard";
-            this.lblTituloDashboard.Size = new System.Drawing.Size(138, 32);
-            this.lblTituloDashboard.TabIndex = 1;
-            this.lblTituloDashboard.Text = "Dashboard";
-            // 
-            // dashboardControl1
-            // 
-            this.dashboardControl1.AutoScroll = true;
-            this.dashboardControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboardControl1.Location = new System.Drawing.Point(0, 0);
-            this.dashboardControl1.Name = "dashboardControl1";
-            this.dashboardControl1.Size = new System.Drawing.Size(954, 641);
-            this.dashboardControl1.TabIndex = 0;
-            // 
-            // panelAreaPrincipal
-            // 
-            this.panelAreaPrincipal.Controls.Add(this.panelConteudo);
-            this.panelAreaPrincipal.Controls.Add(this.panelCabecalho);
-            this.panelAreaPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAreaPrincipal.Location = new System.Drawing.Point(230, 0);
-            this.panelAreaPrincipal.Name = "panelAreaPrincipal";
-            this.panelAreaPrincipal.Size = new System.Drawing.Size(954, 711);
-            this.panelAreaPrincipal.TabIndex = 0;
-            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,21 +525,25 @@
             this.panelCabecalho.ResumeLayout(false);
             this.panelPerfil.ResumeLayout(false);
             this.panelPerfil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureNotificacoes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).EndInit();
             this.panelPesquisa.ResumeLayout(false);
             this.panelPesquisa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePesquisa)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelRodapeMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoMenu)).EndInit();
             this.panelConteudo.ResumeLayout(false);
             this.panelConteudo.PerformLayout();
             this.panelTotalProdutos.ResumeLayout(false);
             this.panelTotalProdutos.PerformLayout();
             this.panelIconeProdutos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picIconeProdutos)).EndInit();
             this.panelAreaPrincipal.ResumeLayout(false);
+            this.panelEstoqueBaixo.ResumeLayout(false);
+            this.panelEstoqueBaixo.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconeProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureNotificacoes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePesquisa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -514,6 +579,11 @@
         private System.Windows.Forms.Label lblTotalProdutosTitulo;
         private System.Windows.Forms.Panel panelIconeProdutos;
         private System.Windows.Forms.PictureBox picIconeProdutos;
+        private System.Windows.Forms.Panel panelEstoqueBaixo;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
