@@ -16,7 +16,7 @@ namespace CASE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PrincipalForm());
+            Application.Run(new LoginForm());
         }
     }
 }
