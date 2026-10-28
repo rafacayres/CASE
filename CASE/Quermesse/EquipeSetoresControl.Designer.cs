@@ -105,7 +105,7 @@
             this.lblFuncionariosdaquermesse.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
             this.lblFuncionariosdaquermesse.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
             this.lblFuncionariosdaquermesse.TabIndex = 0;
-            this.lblFuncionariosdaquermesse.Text = "Funcionários da quermesse";
+            this.lblFuncionariosdaquermesse.Text = "Equipe do evento";
             this.lblFuncionariosdaquermesse.TextAlign = (System.Drawing.ContentAlignment)1;
             // btnNovoFuncionario
             this.btnNovoFuncionario.Name = "btnNovoFuncionario";

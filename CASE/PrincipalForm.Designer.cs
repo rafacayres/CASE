@@ -165,7 +165,7 @@
             this.buttonQuermesses.Padding = new System.Windows.Forms.Padding(36, 0, 4, 0);
             this.buttonQuermesses.Size = new System.Drawing.Size(198, 38);
             this.buttonQuermesses.TabIndex = 2;
-            this.buttonQuermesses.Text = "Quermesses";
+            this.buttonQuermesses.Text = "Eventos";
             this.buttonQuermesses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonQuermesses.UseVisualStyleBackColor = false;
             // 

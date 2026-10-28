@@ -27,6 +27,7 @@
             this.btnEditarQuermesse = new System.Windows.Forms.Button();
             this.dgvQuermesses = new System.Windows.Forms.DataGridView();
             this.colQuermessesEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEventosTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuermessesLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuermessesInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuermessesFim = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +62,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(255, 16, 43, 73);
             this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Quermesses";
+            this.lblTitulo.Text = "Eventos";
             this.lblTitulo.TextAlign = (System.Drawing.ContentAlignment)1;
             // lblSubtitulo
             this.lblSubtitulo.Name = "lblSubtitulo";
@@ -135,7 +136,7 @@
             this.btnNovaQuermesse.BackColor = System.Drawing.Color.FromArgb(255, 23, 105, 210);
             this.btnNovaQuermesse.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
             this.btnNovaQuermesse.TabIndex = 3;
-            this.btnNovaQuermesse.Text = "+ Nova quermesse";
+            this.btnNovaQuermesse.Text = "+ Novo evento";
             this.btnNovaQuermesse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovaQuermesse.FlatAppearance.BorderSize = 0;
             this.btnNovaQuermesse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 228, 234, 242);
@@ -207,6 +208,9 @@
             this.colQuermessesEvento.Name = "colQuermessesEvento";
             this.colQuermessesEvento.HeaderText = "Evento";
             this.colQuermessesEvento.ReadOnly = true;
+            this.colEventosTipo.Name = "colEventosTipo";
+            this.colEventosTipo.HeaderText = "Tipo";
+            this.colEventosTipo.ReadOnly = true;
             this.colQuermessesLocal.Name = "colQuermessesLocal";
             this.colQuermessesLocal.HeaderText = "Local";
             this.colQuermessesLocal.ReadOnly = true;
@@ -222,7 +226,7 @@
             this.colQuermessesSituacao.Name = "colQuermessesSituacao";
             this.colQuermessesSituacao.HeaderText = "Situação";
             this.colQuermessesSituacao.ReadOnly = true;
-            this.dgvQuermesses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.colQuermessesEvento, this.colQuermessesLocal, this.colQuermessesInicio, this.colQuermessesFim, this.colQuermessesResponsavel, this.colQuermessesSituacao });
+            this.dgvQuermesses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.colQuermessesEvento, this.colEventosTipo, this.colQuermessesLocal, this.colQuermessesInicio, this.colQuermessesFim, this.colQuermessesResponsavel, this.colQuermessesSituacao });
             // labelAviso
             this.labelAviso.Name = "labelAviso";
             this.labelAviso.Location = new System.Drawing.Point(32, 652);
@@ -285,6 +289,7 @@
         private System.Windows.Forms.Button btnEditarQuermesse;
         private System.Windows.Forms.DataGridView dgvQuermesses;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuermessesEvento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEventosTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuermessesLocal;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuermessesInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuermessesFim;

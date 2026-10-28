@@ -21,6 +21,8 @@
             this.btnSalvarVisual = new System.Windows.Forms.Button();
             this.lblNomedoevento = new System.Windows.Forms.Label();
             this.txtNomeQuermesse = new System.Windows.Forms.TextBox();
+            this.lblTipoEvento = new System.Windows.Forms.Label();
+            this.cmbTipoEvento = new System.Windows.Forms.ComboBox();
             this.lblLocal = new System.Windows.Forms.Label();
             this.txtLocalQuermesse = new System.Windows.Forms.TextBox();
             this.lblDatainicial = new System.Windows.Forms.Label();
@@ -39,7 +41,7 @@
             // panelFormulario
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Location = new System.Drawing.Point(16, 16);
-            this.panelFormulario.Size = new System.Drawing.Size(608, 538);
+            this.panelFormulario.Size = new System.Drawing.Size(608, 593);
             this.panelFormulario.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.panelFormulario.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
             this.panelFormulario.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
@@ -54,7 +56,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(255, 16, 43, 73);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Nova quermesse";
+            this.lblTitulo.Text = "Novo evento";
             this.lblTitulo.TextAlign = (System.Drawing.ContentAlignment)1;
             // pictureIconeFormulario
             this.pictureIconeFormulario.Name = "pictureIconeFormulario";
@@ -70,7 +72,7 @@
             this.pictureIconeFormulario.TabStop = false;
             // labelAvisoFormulario
             this.labelAvisoFormulario.Name = "labelAvisoFormulario";
-            this.labelAvisoFormulario.Location = new System.Drawing.Point(28, 444);
+            this.labelAvisoFormulario.Location = new System.Drawing.Point(28, 499);
             this.labelAvisoFormulario.Size = new System.Drawing.Size(550, 36);
             this.labelAvisoFormulario.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.labelAvisoFormulario.Font = new System.Drawing.Font("Segoe UI", 8.5F, (System.Drawing.FontStyle)0);
@@ -81,7 +83,7 @@
             this.labelAvisoFormulario.TextAlign = (System.Drawing.ContentAlignment)1;
             // btnCancelar
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Location = new System.Drawing.Point(320, 490);
+            this.btnCancelar.Location = new System.Drawing.Point(320, 545);
             this.btnCancelar.Size = new System.Drawing.Size(115, 35);
             this.btnCancelar.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)0);
@@ -97,7 +99,7 @@
             this.btnCancelar.DialogResult = (System.Windows.Forms.DialogResult)2;
             // btnSalvarVisual
             this.btnSalvarVisual.Name = "btnSalvarVisual";
-            this.btnSalvarVisual.Location = new System.Drawing.Point(450, 490);
+            this.btnSalvarVisual.Location = new System.Drawing.Point(450, 545);
             this.btnSalvarVisual.Size = new System.Drawing.Size(134, 35);
             this.btnSalvarVisual.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.btnSalvarVisual.Font = new System.Drawing.Font("Segoe UI", 9.5F, (System.Drawing.FontStyle)1);
@@ -135,9 +137,26 @@
             this.txtNomeQuermesse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeQuermesse.Multiline = false;
             this.txtNomeQuermesse.MaxLength = 32767;
+            // Tipo do evento
+            this.lblTipoEvento.Name = "lblTipoEvento";
+            this.lblTipoEvento.Location = new System.Drawing.Point(28, 123);
+            this.lblTipoEvento.Size = new System.Drawing.Size(550, 22);
+            this.lblTipoEvento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblTipoEvento.ForeColor = System.Drawing.Color.FromArgb(115, 132, 151);
+            this.lblTipoEvento.Text = "Tipo de evento";
+            this.lblTipoEvento.TabIndex = 7;
+            this.cmbTipoEvento.Name = "cmbTipoEvento";
+            this.cmbTipoEvento.Location = new System.Drawing.Point(28, 145);
+            this.cmbTipoEvento.Size = new System.Drawing.Size(550, 29);
+            this.cmbTipoEvento.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbTipoEvento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipoEvento.Items.AddRange(new object[] { "Quermesse", "Bazar", "Festa", "Outro" });
+            this.cmbTipoEvento.SelectedIndex = 0;
+            this.cmbTipoEvento.TabIndex = 8;
             // lblLocal
             this.lblLocal.Name = "lblLocal";
-            this.lblLocal.Location = new System.Drawing.Point(28, 123);
+            this.lblLocal.Location = new System.Drawing.Point(28, 178);
             this.lblLocal.Size = new System.Drawing.Size(550, 22);
             this.lblLocal.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.lblLocal.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
@@ -148,7 +167,7 @@
             this.lblLocal.TextAlign = (System.Drawing.ContentAlignment)1;
             // txtLocalQuermesse
             this.txtLocalQuermesse.Name = "txtLocalQuermesse";
-            this.txtLocalQuermesse.Location = new System.Drawing.Point(36, 149);
+            this.txtLocalQuermesse.Location = new System.Drawing.Point(36, 204);
             this.txtLocalQuermesse.Size = new System.Drawing.Size(530, 25);
             this.txtLocalQuermesse.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.txtLocalQuermesse.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
@@ -161,7 +180,7 @@
             this.txtLocalQuermesse.MaxLength = 32767;
             // lblDatainicial
             this.lblDatainicial.Name = "lblDatainicial";
-            this.lblDatainicial.Location = new System.Drawing.Point(28, 174);
+            this.lblDatainicial.Location = new System.Drawing.Point(28, 229);
             this.lblDatainicial.Size = new System.Drawing.Size(550, 22);
             this.lblDatainicial.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.lblDatainicial.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
@@ -172,7 +191,7 @@
             this.lblDatainicial.TextAlign = (System.Drawing.ContentAlignment)1;
             // dtpInicioQuermesse
             this.dtpInicioQuermesse.Name = "dtpInicioQuermesse";
-            this.dtpInicioQuermesse.Location = new System.Drawing.Point(28, 196);
+            this.dtpInicioQuermesse.Location = new System.Drawing.Point(28, 251);
             this.dtpInicioQuermesse.Size = new System.Drawing.Size(550, 25);
             this.dtpInicioQuermesse.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.dtpInicioQuermesse.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
@@ -185,7 +204,7 @@
             this.dtpInicioQuermesse.Value = new System.DateTime(2026, 10, 22, 15, 49, 0);
             // lblDatafinal
             this.lblDatafinal.Name = "lblDatafinal";
-            this.lblDatafinal.Location = new System.Drawing.Point(28, 225);
+            this.lblDatafinal.Location = new System.Drawing.Point(28, 280);
             this.lblDatafinal.Size = new System.Drawing.Size(550, 22);
             this.lblDatafinal.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.lblDatafinal.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
@@ -196,7 +215,7 @@
             this.lblDatafinal.TextAlign = (System.Drawing.ContentAlignment)1;
             // dtpFimQuermesse
             this.dtpFimQuermesse.Name = "dtpFimQuermesse";
-            this.dtpFimQuermesse.Location = new System.Drawing.Point(28, 247);
+            this.dtpFimQuermesse.Location = new System.Drawing.Point(28, 302);
             this.dtpFimQuermesse.Size = new System.Drawing.Size(550, 25);
             this.dtpFimQuermesse.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.dtpFimQuermesse.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
@@ -209,7 +228,7 @@
             this.dtpFimQuermesse.Value = new System.DateTime(2026, 10, 22, 15, 49, 0);
             // lblResponsavel
             this.lblResponsavel.Name = "lblResponsavel";
-            this.lblResponsavel.Location = new System.Drawing.Point(28, 276);
+            this.lblResponsavel.Location = new System.Drawing.Point(28, 331);
             this.lblResponsavel.Size = new System.Drawing.Size(550, 22);
             this.lblResponsavel.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.lblResponsavel.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
@@ -220,7 +239,7 @@
             this.lblResponsavel.TextAlign = (System.Drawing.ContentAlignment)1;
             // txtResponsavelQuermesse
             this.txtResponsavelQuermesse.Name = "txtResponsavelQuermesse";
-            this.txtResponsavelQuermesse.Location = new System.Drawing.Point(36, 302);
+            this.txtResponsavelQuermesse.Location = new System.Drawing.Point(36, 357);
             this.txtResponsavelQuermesse.Size = new System.Drawing.Size(530, 25);
             this.txtResponsavelQuermesse.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.txtResponsavelQuermesse.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
@@ -233,7 +252,7 @@
             this.txtResponsavelQuermesse.MaxLength = 32767;
             // lblSituacao
             this.lblSituacao.Name = "lblSituacao";
-            this.lblSituacao.Location = new System.Drawing.Point(28, 327);
+            this.lblSituacao.Location = new System.Drawing.Point(28, 382);
             this.lblSituacao.Size = new System.Drawing.Size(550, 22);
             this.lblSituacao.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.lblSituacao.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
@@ -244,7 +263,7 @@
             this.lblSituacao.TextAlign = (System.Drawing.ContentAlignment)1;
             // cmbSituacaoQuermesse
             this.cmbSituacaoQuermesse.Name = "cmbSituacaoQuermesse";
-            this.cmbSituacaoQuermesse.Location = new System.Drawing.Point(28, 349);
+            this.cmbSituacaoQuermesse.Location = new System.Drawing.Point(28, 404);
             this.cmbSituacaoQuermesse.Size = new System.Drawing.Size(550, 29);
             this.cmbSituacaoQuermesse.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.cmbSituacaoQuermesse.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
@@ -253,11 +272,11 @@
             this.cmbSituacaoQuermesse.TabIndex = 16;
             this.cmbSituacaoQuermesse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSituacaoQuermesse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSituacaoQuermesse.Items.AddRange(new object[] { "Planejada", "Em andamento", "Encerrada" });
+            this.cmbSituacaoQuermesse.Items.AddRange(new object[] { "Planejado", "Em andamento", "Encerrado" });
             this.cmbSituacaoQuermesse.SelectedIndex = 0;
             // lblObservacao
             this.lblObservacao.Name = "lblObservacao";
-            this.lblObservacao.Location = new System.Drawing.Point(28, 378);
+            this.lblObservacao.Location = new System.Drawing.Point(28, 433);
             this.lblObservacao.Size = new System.Drawing.Size(550, 22);
             this.lblObservacao.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.lblObservacao.Font = new System.Drawing.Font("Segoe UI", 9F, (System.Drawing.FontStyle)0);
@@ -268,7 +287,7 @@
             this.lblObservacao.TextAlign = (System.Drawing.ContentAlignment)1;
             // txtObservacaoQuermesse
             this.txtObservacaoQuermesse.Name = "txtObservacaoQuermesse";
-            this.txtObservacaoQuermesse.Location = new System.Drawing.Point(36, 404);
+            this.txtObservacaoQuermesse.Location = new System.Drawing.Point(36, 459);
             this.txtObservacaoQuermesse.Size = new System.Drawing.Size(530, 25);
             this.txtObservacaoQuermesse.Anchor = (System.Windows.Forms.AnchorStyles)5;
             this.txtObservacaoQuermesse.Font = new System.Drawing.Font("Segoe UI", 10F, (System.Drawing.FontStyle)0);
@@ -287,6 +306,8 @@
             this.panelFormulario.Controls.Add(this.btnSalvarVisual);
             this.panelFormulario.Controls.Add(this.lblNomedoevento);
             this.panelFormulario.Controls.Add(this.txtNomeQuermesse);
+            this.panelFormulario.Controls.Add(this.lblTipoEvento);
+            this.panelFormulario.Controls.Add(this.cmbTipoEvento);
             this.panelFormulario.Controls.Add(this.lblLocal);
             this.panelFormulario.Controls.Add(this.txtLocalQuermesse);
             this.panelFormulario.Controls.Add(this.lblDatainicial);
@@ -304,8 +325,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
             this.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Text = "Nova quermesse";
-            this.ClientSize = new System.Drawing.Size(640, 570);
+            this.Text = "Novo evento";
+            this.ClientSize = new System.Drawing.Size(640, 625);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.MaximizeBox = false;
@@ -328,6 +349,8 @@
         private System.Windows.Forms.Button btnSalvarVisual;
         private System.Windows.Forms.Label lblNomedoevento;
         private System.Windows.Forms.TextBox txtNomeQuermesse;
+        private System.Windows.Forms.Label lblTipoEvento;
+        private System.Windows.Forms.ComboBox cmbTipoEvento;
         private System.Windows.Forms.Label lblLocal;
         private System.Windows.Forms.TextBox txtLocalQuermesse;
         private System.Windows.Forms.Label lblDatainicial;

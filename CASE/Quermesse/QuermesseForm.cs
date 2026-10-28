@@ -13,7 +13,7 @@ namespace CASE.Quermesse
             InitializeComponent();
             if (editar)
             {
-                Text = lblTitulo.Text = "Editar quermesse";
+                Text = lblTitulo.Text = "Editar evento";
                 txtNomeQuermesse.Text = "Quermesse de São João 2026";
                 txtLocalQuermesse.Text = "Pátio da comunidade";
                 txtResponsavelQuermesse.Text = "Rafael Cayres";

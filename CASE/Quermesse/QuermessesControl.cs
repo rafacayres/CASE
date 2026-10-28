@@ -28,7 +28,7 @@ namespace CASE.Quermesse
         // Exemplos visuais; sem persistência ou regras de negócio.
         private void CarregarExemplos()
         {
-            dgvQuermesses.Rows.Add(new object[] { "São João 2026", "Pátio da comunidade", "22/10/2026", "25/10/2026", "Rafael Cayres", "Em andamento" });
+            dgvQuermesses.Rows.Add(new object[] { "São João 2026", "Quermesse", "Pátio da comunidade", "22/10/2026", "25/10/2026", "Rafael Cayres", "Em andamento" });
             dgvQuermesses.ClearSelection();
         }
     }

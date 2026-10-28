@@ -120,7 +120,7 @@
             this.lblQuermesse.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
             this.lblQuermesse.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
             this.lblQuermesse.TabIndex = 5;
-            this.lblQuermesse.Text = "Quermesse";
+            this.lblQuermesse.Text = "Evento";
             this.lblQuermesse.TextAlign = (System.Drawing.ContentAlignment)1;
             // cmbEventoEscala
             this.cmbEventoEscala.Name = "cmbEventoEscala";
