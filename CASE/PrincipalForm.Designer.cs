@@ -52,7 +52,6 @@
             this.buttonSair = new System.Windows.Forms.Button();
             this.buttonConfiguracoes = new System.Windows.Forms.Button();
             this.panelConteudo = new System.Windows.Forms.Panel();
-            this.dashboardControl1 = new CASE.DashboardControl();
             this.panelAreaPrincipal = new System.Windows.Forms.Panel();
             this.pictureNotificacoes = new System.Windows.Forms.PictureBox();
             this.pictureUsuario = new System.Windows.Forms.PictureBox();
@@ -472,25 +471,11 @@
             // 
             // panelConteudo
             // 
-            this.panelConteudo.Controls.Add(this.dashboardControl1);
             this.panelConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelConteudo.Location = new System.Drawing.Point(0, 70);
             this.panelConteudo.Name = "panelConteudo";
             this.panelConteudo.Size = new System.Drawing.Size(954, 641);
             this.panelConteudo.TabIndex = 2;
-            // 
-            // dashboardControl1
-            // 
-            this.dashboardControl1.AutoScroll = true;
-            this.dashboardControl1.AutoScrollMinSize = new System.Drawing.Size(970, 690);
-            this.dashboardControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.dashboardControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboardControl1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dashboardControl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(51)))), ((int)(((byte)(75)))));
-            this.dashboardControl1.Location = new System.Drawing.Point(0, 0);
-            this.dashboardControl1.Name = "dashboardControl1";
-            this.dashboardControl1.Size = new System.Drawing.Size(954, 641);
-            this.dashboardControl1.TabIndex = 0;
             // 
             // panelAreaPrincipal
             // 
@@ -785,7 +770,6 @@
         private System.Windows.Forms.Label labelTipoUsuario;
         private System.Windows.Forms.Label labelNomeUsuario;
         private System.Windows.Forms.PictureBox pictureNotificacoes;
-        private CASE.DashboardControl dashboardControl1;
     }
 }
 
