@@ -5,7 +5,6 @@ using System.Runtime.CompilerServices;
 
 namespace CASE.Utils
 {
-    // Estilo compartilhado das telas de demonstração. Não acessa serviços ou banco.
     internal static class FrontendTheme
     {
         public static readonly Color Azul = VisualUtils.Azul;
@@ -26,7 +25,7 @@ namespace CASE.Utils
                 if (painel != null && painel.BackColor.ToArgb() == Color.White.ToArgb())
                 {
                     VisualUtils.Arredondar(painel, 12);
-                    painel.Paint += VisualUtils.DesenharBorda;
+                    VisualUtils.AplicarBorda(painel);
                     painel.SizeChanged += (s, e) => VisualUtils.Arredondar(painel, 12);
                 }
                 var botao = controle as Button;
@@ -65,7 +64,7 @@ namespace CASE.Utils
                 var combo = controle as ComboBox;
                 if (combo != null) VisualUtils.EstilizarSelecao(combo);
                 var icone = controle as PictureBox;
-                if (icone != null && icone.Image == null)
+                if (icone != null && (icone.Image == null || icone.Name == "pictureIconeTela"))
                 {
                     VisualUtils.Arredondar(icone, 8);
                     icone.SizeChanged += (s, e) => VisualUtils.Arredondar(icone, 8);
@@ -88,8 +87,8 @@ namespace CASE.Utils
             var grade = (DataGridView)sender;
             string valor = Convert.ToString(e.FormattedValue);
             bool acao = grade.Columns[e.ColumnIndex] is DataGridViewButtonColumn;
-            bool verde = valor == "Entrada" || valor == "Em estoque" || valor == "Normal" || valor == "Ativo" || valor == "Confirmada" || valor == "Concluída";
-            bool vermelho = valor == "Saída" || valor == "Baixo" || valor == "Estoque baixo" || valor == "Sem estoque" || valor == "Inativo";
+            bool verde = valor == "Aprovado" || valor == "Entrada" || valor == "Em estoque" || valor == "Normal" || valor == "Ativo" || valor == "Confirmada" || valor == "Concluída";
+            bool vermelho = valor == "Rejeitado" || valor == "Suspenso" || valor == "Saída" || valor == "Baixo" || valor == "Estoque baixo" || valor == "Sem estoque" || valor == "Inativo";
             bool pendente = valor == "Pendente" || valor == "A confirmar";
             bool azul = valor == "Em andamento" || valor == "Em atendimento" || valor == "Venda";
             if (!acao && !verde && !vermelho && !pendente && !azul) return;

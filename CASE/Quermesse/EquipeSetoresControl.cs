@@ -43,8 +43,6 @@ namespace CASE.Quermesse
         {
             labelAviso.Text = "Prévia do formulário de setor: nenhum dado foi salvo.";
         }
-
-        // Exemplos visuais; sem persistência ou regras de negócio.
         private void CarregarExemplos()
         {
             dgvEquipe.Rows.Add(new object[] { "Rafael Cayres", "rafael", "Administrador", "Organização", "Noite", "Ativo" });

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -300,5 +300,32 @@
   </data>
   <data name="LucideAzulImagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lucide\image-plus-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulFornecedores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\truck-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulAcessos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\shield-check-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAzulTransferencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\arrow-right-left-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAcaoFornecedores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\truck-acao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAcaoAcessos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\shield-check-acao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAcaoTransferencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\arrow-right-left-acao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideMenuFornecedores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\truck-menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideMenuAcessos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\shield-check-menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LucideAcaoEntrada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucide\package-plus-branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

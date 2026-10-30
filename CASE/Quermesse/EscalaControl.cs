@@ -31,8 +31,6 @@ namespace CASE.Quermesse
                     && (cmbFiltroTurnoEscala.SelectedIndex == 0 || Convert.ToString(linha.Cells[3].Value) == cmbFiltroTurnoEscala.Text);
             dgvEscala.ClearSelection();
         }
-
-        // Exemplos visuais; sem persistência ou regras de negócio.
         private void CarregarExemplos()
         {
             dgvEscala.Rows.Add(new object[] { "Marina Souza", "Bebidas", "22/10/2026", "Noite", "18:00", "23:00", "Confirmada" });

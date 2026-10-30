@@ -12,30 +12,24 @@ namespace CASE
             CASE.Utils.FrontendTheme.Aplicar(this);
             VisualUtils.Arredondar(panelCardEstoqueTotal, 12);
             panelCardEstoqueTotal.SizeChanged += AjustarArredondamento;
-            panelCardEstoqueTotal.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelCardEstoqueTotal);
             VisualUtils.Arredondar(panelCardEstoqueBaixo, 12);
             panelCardEstoqueBaixo.SizeChanged += AjustarArredondamento;
-            panelCardEstoqueBaixo.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelCardEstoqueBaixo);
             VisualUtils.Arredondar(panelCardSemEstoque, 12);
             panelCardSemEstoque.SizeChanged += AjustarArredondamento;
-            panelCardSemEstoque.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelCardSemEstoque);
             VisualUtils.Arredondar(panelCardValorEstoque, 12);
             panelCardValorEstoque.SizeChanged += AjustarArredondamento;
-            panelCardValorEstoque.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelCardValorEstoque);
             VisualUtils.Arredondar(panelFiltrosEstoque, 12);
             panelFiltrosEstoque.SizeChanged += AjustarArredondamento;
-            panelFiltrosEstoque.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelFiltrosEstoque);
             VisualUtils.Arredondar(btnAtualizarEstoque, 8);
             btnAtualizarEstoque.SizeChanged += AjustarArredondamento;
             VisualUtils.Arredondar(panelListaEstoque, 12);
             panelListaEstoque.SizeChanged += AjustarArredondamento;
-            panelListaEstoque.Paint += VisualUtils.DesenharBorda;
-
-            // Dados fictícios para composição visual, sem persistência.
-            dgvEstoque.Rows.Add(new object[] { "001", "Refrigerante 2L", "Bebidas", "25", "10", "40", "Normal" });
-            dgvEstoque.Rows.Add(new object[] { "002", "Água Mineral 500ml", "Bebidas", "3", "10", "48", "Baixo" });
-            dgvEstoque.Rows.Add(new object[] { "003", "Copo Descartável", "Descartáveis", "0", "20", "120", "Sem estoque" });
-            dgvEstoque.ClearSelection();
+            VisualUtils.AplicarBorda(panelListaEstoque);
             panelCardEstoqueTotal.Visible = panelCardEstoqueBaixo.Visible = false;
             panelCardSemEstoque.Visible = panelCardValorEstoque.Visible = false;
             panelFiltrosEstoque.Top = 115;
@@ -46,7 +40,6 @@ namespace CASE
             txtPesquisarEstoque.Visible = cmbCategoriaEstoque.Visible = cmbStatusEstoque.Visible = false;
             btnAtualizarEstoque.Visible = false;
             dgvEstoqueColCodigo.Visible = dgvEstoqueColIdeal.Visible = false;
-            dgvEstoque.Rows.Clear();
             dgvEstoque.Rows.Add("001", "Refrigerante", "Bebidas", "120", "30", "150", "Em estoque");
             dgvEstoque.Rows.Add("002", "Água mineral", "Bebidas", "8", "20", "100", "Estoque baixo");
             dgvEstoque.Rows.Add("003", "Cachorro-quente", "Alimentação", "5", "10", "80", "Estoque baixo");

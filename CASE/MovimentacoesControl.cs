@@ -12,25 +12,18 @@ namespace CASE
             CASE.Utils.FrontendTheme.Aplicar(this);
             VisualUtils.Arredondar(panelCardEntradasMes, 12);
             panelCardEntradasMes.SizeChanged += AjustarArredondamento;
-            panelCardEntradasMes.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelCardEntradasMes);
             VisualUtils.Arredondar(panelCardSaidasMes, 12);
             panelCardSaidasMes.SizeChanged += AjustarArredondamento;
-            panelCardSaidasMes.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelCardSaidasMes);
             VisualUtils.Arredondar(panelFiltrosMovimentacoes, 12);
             panelFiltrosMovimentacoes.SizeChanged += AjustarArredondamento;
-            panelFiltrosMovimentacoes.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelFiltrosMovimentacoes);
             VisualUtils.Arredondar(btnNovaMovimentacao, 8);
             btnNovaMovimentacao.SizeChanged += AjustarArredondamento;
             VisualUtils.Arredondar(panelListaMovimentacoes, 12);
             panelListaMovimentacoes.SizeChanged += AjustarArredondamento;
-            panelListaMovimentacoes.Paint += VisualUtils.DesenharBorda;
-
-            // Dados fictícios para composição visual, sem persistência.
-            dgvMovimentacoes.Rows.Add(new object[] { "01/10/2026", "Refrigerante 2L", "Entrada", "25", "Ana", "Compra" });
-            dgvMovimentacoes.Rows.Add(new object[] { "02/10/2026", "Água Mineral 500ml", "Entrada", "48", "Carlos", "Reposição" });
-            dgvMovimentacoes.Rows.Add(new object[] { "03/10/2026", "Copo Descartável", "Saída", "20", "Ana", "Uso interno" });
-            dgvMovimentacoes.Rows.Add(new object[] { "04/10/2026", "Refrigerante 2L", "Saída", "12", "Carlos", "Consumo" });
-            dgvMovimentacoes.ClearSelection();
+            VisualUtils.AplicarBorda(panelListaMovimentacoes);
             lblSubtituloMovimentacoes.Text = "Histórico de entradas e saídas";
             panelCardEntradasMes.Visible = panelCardSaidasMes.Visible = false;
             panelFiltrosMovimentacoes.Top = 115;
@@ -39,7 +32,6 @@ namespace CASE
             dgvMovimentacoes.Height = 260;
             btnNovaMovimentacao.Text = "Filtrar";
             dgvMovimentacoesColMotivo.Visible = false;
-            dgvMovimentacoes.Rows.Clear();
             dgvMovimentacoes.Rows.Add("06/10/2026", "Notebook Dell", "Entrada", "5", "Rafael", "Compra");
             dgvMovimentacoes.Rows.Add("05/10/2026", "Mouse Logitech", "Saída", "2", "Rafael", "Venda");
             dgvMovimentacoes.Rows.Add("04/10/2026", "Teclado Mecânico", "Entrada", "10", "Rafael", "Compra");

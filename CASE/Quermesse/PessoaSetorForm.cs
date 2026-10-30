@@ -11,6 +11,7 @@ namespace CASE.Quermesse
         public PessoaSetorForm(QuermessePreview exemplos, PessoaPreview pessoa)
         {
             InitializeComponent();
+            lblPerfildeacesso.Text = "Perfil neste evento";
             if (pessoa != null)
             {
                 Text = lblTitulo.Text = "Funcionário e setor";

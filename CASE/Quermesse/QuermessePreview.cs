@@ -11,6 +11,8 @@ namespace CASE.Quermesse
         public string Nome { get; set; }
         public string Login { get; set; }
         public PerfilUsuario Perfil { get; set; }
+        // Perfil do evento e administração geral são independentes nesta prévia.
+        public bool AdministradorSistema { get; set; }
         public string Setor { get; set; }
         public string Turno { get; set; }
         public bool Ativo { get; set; } = true;
@@ -62,7 +64,7 @@ namespace CASE.Quermesse
         public QuermessePreview()
         {
             Pessoas.AddRange(new[] {
-                new PessoaPreview { Id = 1, Nome = "Rafael Cayres", Login = "rafael", Perfil = PerfilUsuario.Administrador, Setor = "Organização", Turno = "Noite" },
+                new PessoaPreview { Id = 1, Nome = "Rafael Cayres", Login = "rafael", Perfil = PerfilUsuario.Administrador, AdministradorSistema = true, Setor = "Organização", Turno = "Noite" },
                 new PessoaPreview { Id = 2, Nome = "Ana Silva", Login = "ana", Perfil = PerfilUsuario.Gerente, Setor = "Gestão", Turno = "Noite" },
                 new PessoaPreview { Id = 3, Nome = "Marina Souza", Login = "marina", Perfil = PerfilUsuario.Vendedor, Setor = "Bebidas", Turno = "Noite" },
                 new PessoaPreview { Id = 4, Nome = "Pedro Lima", Login = "pedro", Perfil = PerfilUsuario.Vendedor, Setor = "Alimentação", Turno = "Noite" },

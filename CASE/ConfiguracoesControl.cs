@@ -6,29 +6,28 @@ namespace CASE
 {
     public partial class ConfiguracoesControl : UserControl
     {
+        public event EventHandler GerenciarAcessosSolicitado;
         public ConfiguracoesControl()
         {
             InitializeComponent();
             CASE.Utils.FrontendTheme.Aplicar(this);
             VisualUtils.Arredondar(panelPerfilUsuario, 12);
             panelPerfilUsuario.SizeChanged += AjustarArredondamento;
-            panelPerfilUsuario.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelPerfilUsuario);
             VisualUtils.Arredondar(btnSalvarPerfil, 8);
             btnSalvarPerfil.SizeChanged += AjustarArredondamento;
             VisualUtils.Arredondar(panelPreferencias, 12);
             panelPreferencias.SizeChanged += AjustarArredondamento;
-            panelPreferencias.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelPreferencias);
             VisualUtils.Arredondar(btnSalvarPreferencias, 8);
             btnSalvarPreferencias.SizeChanged += AjustarArredondamento;
             VisualUtils.Arredondar(panelSolicitacoesPendentes, 12);
             panelSolicitacoesPendentes.SizeChanged += AjustarArredondamento;
-            panelSolicitacoesPendentes.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelSolicitacoesPendentes);
             VisualUtils.Arredondar(btnAprovarSolicitacao, 8);
             btnAprovarSolicitacao.SizeChanged += AjustarArredondamento;
             VisualUtils.Arredondar(btnRejeitarSolicitacao, 8);
             btnRejeitarSolicitacao.SizeChanged += AjustarArredondamento;
-
-            // Dados fictícios para composição visual, sem persistência.
             dgvSolicitacoes.Rows.Add(new object[] { "Marina Souza", "marina.souza", "marina@example.com", "01/10/2026", "Pendente" });
             dgvSolicitacoes.Rows.Add(new object[] { "Pedro Lima", "pedro.lima", "pedro@example.com", "02/10/2026", "Pendente" });
             dgvSolicitacoes.ClearSelection();
@@ -78,6 +77,11 @@ namespace CASE
                 botoes.Add(botao);
                 botao.Click += (s, e) =>
                 {
+                    if (pagina == panelSolicitacoesPendentes)
+                    {
+                        GerenciarAcessosSolicitado?.Invoke(this, EventArgs.Empty);
+                        return;
+                    }
                     foreach (Panel item in paginas) item.Visible = item == pagina;
                     foreach (Button item in botoes) item.BackColor = item == botao ? System.Drawing.Color.FromArgb(215, 233, 255) : BackColor;
                 };

@@ -19,19 +19,12 @@ namespace CASE
             VisualUtils.Arredondar(btnPaginaAnterior, 8);
             VisualUtils.Arredondar(btnProximaPagina, 8);
 
-            panelAcoesProdutos.Paint += VisualUtils.DesenharBorda;
-            panelListaProdutos.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelAcoesProdutos);
+            VisualUtils.AplicarBorda(panelListaProdutos);
 
             panelAcoesProdutos.SizeChanged += AjustarArredondamento;
             panelListaProdutos.SizeChanged += AjustarArredondamento;
             cmbFiltroCategoria.SelectedIndex = 0;
-
-            // Dados fictícios para composição visual, sem persistência.
-            dgvProdutos.Rows.Add("001", "Refrigerante 2L", "Bebidas", "25", "R$ 9,90");
-            dgvProdutos.Rows.Add("002", "Água Mineral 500ml", "Bebidas", "48", "R$ 3,50");
-            dgvProdutos.Rows.Add("003", "Copo Descartável", "Descartáveis", "120", "R$ 0,25");
-            dgvProdutos.ClearSelection();
-            dgvProdutos.Rows.Clear();
             dgvProdutos.Rows.Add("001", "Refrigerante", "Bebidas", "120", "6,00");
             dgvProdutos.Rows.Add("002", "Água mineral", "Bebidas", "80", "4,00");
             dgvProdutos.Rows.Add("003", "Cachorro-quente", "Alimentação", "65", "12,00");

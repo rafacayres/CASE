@@ -37,7 +37,7 @@ namespace CASE.Utils
             botao.FlatAppearance.MouseOverBackColor = principal ? Color.FromArgb(20, 91, 181) : Color.FromArgb(241, 246, 252);
             botao.FlatAppearance.MouseDownBackColor = principal ? Color.FromArgb(17, 76, 154) : Color.FromArgb(231, 239, 249);
             Arredondar(botao, 8);
-            botao.SizeChanged += (s, e) => Arredondar(botao, 8);
+            AcabamentoArredondado.DefinirBorda(botao, !principal);
         }
 
         public static void EstilizarCampo(TextBox campo)
@@ -69,6 +69,20 @@ namespace CASE.Utils
             campo.ForeColor = Texto;
             campo.DrawMode = DrawMode.OwnerDrawFixed;
             campo.ItemHeight = 23;
+            var painel = campo.Parent;
+            painel.Paint += (s, e) =>
+            {
+                if (!campo.Visible) return;
+                var area = new Rectangle(campo.Left - 1, campo.Top - 2, campo.Width + 2, campo.Height + 4);
+                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                using (var caminho = CriarRetanguloArredondado(area, 7))
+                using (var caneta = new Pen(campo.Focused ? Azul : Borda))
+                    e.Graphics.DrawPath(caneta, caminho);
+            };
+            campo.Enter += (s, e) => painel.Invalidate();
+            campo.Leave += (s, e) => painel.Invalidate();
+            campo.LocationChanged += (s, e) => painel.Invalidate();
+            campo.SizeChanged += (s, e) => painel.Invalidate();
             campo.DrawItem += (s, e) =>
             {
                 if (e.Bounds.Width <= 0 || e.Bounds.Height <= 0) return;
@@ -81,82 +95,65 @@ namespace CASE.Utils
                     TextFormatFlags.Left | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
             };
         }
+        public static void AplicarIcone(Button botao, Image imagem)
+        {
+            botao.Image = imagem;
+            botao.ImageAlign = ContentAlignment.MiddleLeft;
+            botao.TextImageRelation = TextImageRelation.ImageBeforeText;
+            botao.Padding = new Padding(10, 0, 10, 0);
+        }
+
+        public static void ExibirEstadoVazio(DataGridView grade, string mensagem)
+        {
+            grade.Paint += (s, e) =>
+            {
+                bool possuiLinhas = false;
+                foreach (DataGridViewRow linha in grade.Rows)
+                    if (linha.Visible && !linha.IsNewRow) { possuiLinhas = true; break; }
+                if (possuiLinhas) return;
+
+                var area = new Rectangle(16, grade.ColumnHeadersHeight + 16,
+                    Math.Max(0, grade.ClientSize.Width - 32), Math.Max(0, grade.ClientSize.Height - grade.ColumnHeadersHeight - 32));
+                TextRenderer.DrawText(e.Graphics, mensagem, grade.Font, area, TextoSuave,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak);
+            };
+            grade.RowsAdded += (s, e) => grade.Invalidate();
+            grade.RowsRemoved += (s, e) => grade.Invalidate();
+        }
+
         public static GraphicsPath CriarRetanguloArredondado(Rectangle area, int raio)
         {
-            int d = Math.Max(2, Math.Min(raio * 2, Math.Min(area.Width, area.Height)));
+            return CriarRetanguloArredondado((RectangleF)area, raio);
+        }
+
+        public static GraphicsPath CriarRetanguloArredondado(RectangleF area, float raio)
+        {
             var caminho = new GraphicsPath();
-            caminho.AddArc(area.Left, area.Top, d, d, 180, 90);
-            caminho.AddArc(area.Right - d, area.Top, d, d, 270, 90);
-            caminho.AddArc(area.Right - d, area.Bottom - d, d, d, 0, 90);
-            caminho.AddArc(area.Left, area.Bottom - d, d, d, 90, 90);
+            if (area.Width <= 0 || area.Height <= 0) return caminho;
+
+            float diametro = Math.Min(Math.Max(0, raio * 2), Math.Min(area.Width, area.Height));
+            if (diametro == 0)
+            {
+                caminho.AddRectangle(area);
+                return caminho;
+            }
+
+            caminho.AddArc(area.Left, area.Top, diametro, diametro, 180, 90);
+            caminho.AddArc(area.Right - diametro, area.Top, diametro, diametro, 270, 90);
+            caminho.AddArc(area.Right - diametro, area.Bottom - diametro, diametro, diametro, 0, 90);
+            caminho.AddArc(area.Left, area.Bottom - diametro, diametro, diametro, 90, 90);
             caminho.CloseFigure();
             return caminho;
         }
 
-        // Arredonda os cantos de um controle
         public static void Arredondar(Control controle, int raio)
         {
-            if (controle.Width <= 0 || controle.Height <= 0)
-                return;
-
-            raio = Math.Max(0, Math.Min(raio,
-                Math.Min(controle.Width, controle.Height) / 2));
-
-            if (raio == 0)
-            {
-                controle.Region?.Dispose();
-                controle.Region = null;
-                return;
-            }
-
-            int diametro = raio * 2;
-
-            using (GraphicsPath caminho = new GraphicsPath())
-            {
-                Rectangle area = new Rectangle(
-                    0, 0, controle.Width, controle.Height
-                );
-
-                caminho.AddArc(0, 0, diametro, diametro, 180, 90);
-                caminho.AddArc(area.Width - diametro, 0, diametro, diametro, 270, 90);
-                caminho.AddArc(area.Width - diametro, area.Height - diametro, diametro, diametro, 0, 90);
-                caminho.AddArc(0, area.Height - diametro, diametro, diametro, 90, 90);
-                caminho.CloseFigure();
-
-                Region anterior = controle.Region;
-                controle.Region = new Region(caminho);
-                anterior?.Dispose();
-            }
+            AcabamentoArredondado.Aplicar(controle, raio);
         }
 
-        // Desenha a borda cinza arredondada dos Panels
-        public static void DesenharBorda(object sender, PaintEventArgs e)
+        public static void AplicarBorda(Control controle)
         {
-            Panel painel = sender as Panel;
-
-            if (painel == null || painel.Width < 18 || painel.Height < 18)
-                return;
-
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-
-            int raio = 8;
-            int diametro = raio * 2;
-
-            Rectangle area = new Rectangle(
-                0, 0, painel.Width - 1, painel.Height - 1
-            );
-
-            using (GraphicsPath caminho = new GraphicsPath())
-            using (Pen caneta = new Pen(Borda, 1))
-            {
-                caminho.AddArc(area.Left, area.Top, diametro, diametro, 180, 90);
-                caminho.AddArc(area.Right - diametro, area.Top, diametro, diametro, 270, 90);
-                caminho.AddArc(area.Right - diametro, area.Bottom - diametro, diametro, diametro, 0, 90);
-                caminho.AddArc(area.Left, area.Bottom - diametro, diametro, diametro, 90, 90);
-                caminho.CloseFigure();
-
-                e.Graphics.DrawPath(caneta, caminho);
-            }
+            AcabamentoArredondado.DefinirBorda(controle, true);
         }
     }
 }

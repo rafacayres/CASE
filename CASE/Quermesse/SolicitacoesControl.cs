@@ -33,8 +33,6 @@ namespace CASE.Quermesse
                     && (cmbStatusListaSolicitacoes.SelectedIndex == 0 || Convert.ToString(linha.Cells[6].Value) == cmbStatusListaSolicitacoes.Text);
             dgvSolicitacoesQuermesse.ClearSelection();
         }
-
-        // Exemplos visuais; sem persistência ou regras de negócio.
         private void CarregarExemplos()
         {
             dgvSolicitacoesQuermesse.Rows.Add(new object[] { "22/10 18:10", "Marina Souza", "Bebidas", "Reposição", "Água mineral", "20", "Pendente" });

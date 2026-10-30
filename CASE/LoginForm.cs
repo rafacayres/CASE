@@ -29,8 +29,8 @@ namespace CASE
             VisualUtils.Arredondar(panelUsuario, 7);
             VisualUtils.Arredondar(panelSenha, 7);
 
-            panelUsuario.Paint += VisualUtils.DesenharBorda;
-            panelSenha.Paint += VisualUtils.DesenharBorda;
+            VisualUtils.AplicarBorda(panelUsuario);
+            VisualUtils.AplicarBorda(panelSenha);
         }
 
         private void panelLogin_Paint(object sender, PaintEventArgs e)
