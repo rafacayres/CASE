@@ -118,86 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="package(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FundoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FundoLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sem título2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sem título2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="triangle-alert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\triangle-alert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="package-plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="package-minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="layout-dashboard(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\layout-dashboard(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circle-user-round" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle-user-round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="layout-dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\layout-dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circle-user(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle-user(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CASE_logo_login_otimizada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CASE_logo_login_otimizada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sem título4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sem título4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fundo Tecnológico Azul com Logo CASE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fundo Tecnológico Azul com Logo CASE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="package" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow-left-right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-left-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="warehouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warehouse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sem título1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sem título1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circle-user(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle-user(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sem título" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sem título.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circle-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bell(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bell(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="log-out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log-out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chart-no-axes-column-increasing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chart-no-axes-column-increasing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="package1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sem título3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sem título3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LucideDashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lucide\layout-dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -276,15 +201,6 @@
   </data>
   <data name="LucideAzulConfiguracoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lucide\settings-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LucideAzulSair" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lucide\log-out-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LucideAzulPesquisa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lucide\search-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LucideAzulNotificacoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lucide\bell-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LucideAzulUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lucide\circle-user-round-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

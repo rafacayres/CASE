@@ -8,6 +8,9 @@ nos PictureBox: azul claro no menu, azul marinho no cabeçalho e variantes
 com sufixo -azul para os cabeçalhos, formulários e indicadores das telas.
 Os recursos são incluídos no aplicativo; não há download durante a execução.
 
+Somente as variantes PNG usadas pelas telas são mantidas. Os SVGs correspondentes
+permanecem como arquivos de origem para gerar os ícones novamente.
+
 Licenças e atribuições: LICENSE.txt (Lucide e Feather).
 Ícones das telas de fornecedores, acessos e transferência:
 

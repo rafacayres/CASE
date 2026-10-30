@@ -61,211 +61,211 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroForm.cs">
+    <Compile Include="Telas\Acesso\CadastroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroForm.Designer.cs">
+    <Compile Include="Telas\Acesso\CadastroForm.Designer.cs">
       <DependentUpon>CadastroForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashboardControl.cs">
+    <Compile Include="Telas\Dashboard\DashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DashboardControl.Designer.cs">
+    <Compile Include="Telas\Dashboard\DashboardControl.Designer.cs">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Telas\Acesso\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrincipalForm.cs">
+    <Compile Include="Telas\Principal\PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrincipalForm.Designer.cs">
+    <Compile Include="Telas\Principal\PrincipalForm.Designer.cs">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Telas\Acesso\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProdutosControl.cs">
+    <Compile Include="Telas\Produtos\ProdutosControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProdutosControl.Designer.cs">
+    <Compile Include="Telas\Produtos\ProdutosControl.Designer.cs">
       <DependentUpon>ProdutosControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="EstoqueControl.cs">
+    <Compile Include="Telas\Estoque\EstoqueControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EstoqueControl.Designer.cs">
+    <Compile Include="Telas\Estoque\EstoqueControl.Designer.cs">
       <DependentUpon>EstoqueControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovimentacoesControl.cs">
+    <Compile Include="Telas\Estoque\MovimentacoesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MovimentacoesControl.Designer.cs">
+    <Compile Include="Telas\Estoque\MovimentacoesControl.Designer.cs">
       <DependentUpon>MovimentacoesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="RelatoriosControl.cs">
+    <Compile Include="Telas\Relatorios\RelatoriosControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RelatoriosControl.Designer.cs">
+    <Compile Include="Telas\Relatorios\RelatoriosControl.Designer.cs">
       <DependentUpon>RelatoriosControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfiguracoesControl.cs">
+    <Compile Include="Telas\Configuracoes\ConfiguracoesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ConfiguracoesControl.Designer.cs">
+    <Compile Include="Telas\Configuracoes\ConfiguracoesControl.Designer.cs">
       <DependentUpon>ConfiguracoesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProdutoForm.cs">
+    <Compile Include="Telas\Produtos\ProdutoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProdutoForm.Designer.cs">
+    <Compile Include="Telas\Produtos\ProdutoForm.Designer.cs">
       <DependentUpon>ProdutoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FornecedoresControl.cs"><SubType>UserControl</SubType></Compile>
-    <Compile Include="FornecedoresControl.Designer.cs"><DependentUpon>FornecedoresControl.cs</DependentUpon></Compile>
-    <Compile Include="AcessosControl.cs"><SubType>UserControl</SubType></Compile>
-    <Compile Include="AcessosControl.Designer.cs"><DependentUpon>AcessosControl.cs</DependentUpon></Compile>
-    <Compile Include="OperacoesEstoqueControl.cs"><SubType>UserControl</SubType></Compile>
-    <Compile Include="OperacoesEstoqueControl.Designer.cs"><DependentUpon>OperacoesEstoqueControl.cs</DependentUpon></Compile>
-    <Compile Include="EntradaMercadoriaForm.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="EntradaMercadoriaForm.Designer.cs"><DependentUpon>EntradaMercadoriaForm.cs</DependentUpon></Compile>
-    <Compile Include="TransferenciaEstoqueForm.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="TransferenciaEstoqueForm.Designer.cs"><DependentUpon>TransferenciaEstoqueForm.cs</DependentUpon></Compile>
-    <Compile Include="OperacoesPreview.cs" />
+    <Compile Include="Telas\Fornecedores\FornecedoresControl.cs"><SubType>UserControl</SubType></Compile>
+    <Compile Include="Telas\Fornecedores\FornecedoresControl.Designer.cs"><DependentUpon>FornecedoresControl.cs</DependentUpon></Compile>
+    <Compile Include="Telas\Acesso\AcessosControl.cs"><SubType>UserControl</SubType></Compile>
+    <Compile Include="Telas\Acesso\AcessosControl.Designer.cs"><DependentUpon>AcessosControl.cs</DependentUpon></Compile>
+    <Compile Include="Telas\Estoque\OperacoesEstoqueControl.cs"><SubType>UserControl</SubType></Compile>
+    <Compile Include="Telas\Estoque\OperacoesEstoqueControl.Designer.cs"><DependentUpon>OperacoesEstoqueControl.cs</DependentUpon></Compile>
+    <Compile Include="Telas\Estoque\EntradaMercadoriaForm.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Telas\Estoque\EntradaMercadoriaForm.Designer.cs"><DependentUpon>EntradaMercadoriaForm.cs</DependentUpon></Compile>
+    <Compile Include="Telas\Estoque\TransferenciaEstoqueForm.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Telas\Estoque\TransferenciaEstoqueForm.Designer.cs"><DependentUpon>TransferenciaEstoqueForm.cs</DependentUpon></Compile>
+    <Compile Include="DadosExemplo\OperacoesPreview.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\VisualUtils.cs" />
     <Compile Include="Utils\AcabamentoArredondado.cs" />
     <Compile Include="Utils\FrontendTheme.cs" />
-    <Compile Include="Quermesse\PessoaSetorForm.Designer.cs">
+    <Compile Include="Telas\Equipe\PessoaSetorForm.Designer.cs">
       <DependentUpon>PessoaSetorForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\PessoaSetorForm.resx">
+    <EmbeddedResource Include="Telas\Equipe\PessoaSetorForm.resx">
       <DependentUpon>PessoaSetorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\PessoaSetorForm.cs">
+    <Compile Include="Telas\Equipe\PessoaSetorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Quermesse\SolicitacaoForm.Designer.cs">
+    <Compile Include="Telas\Solicitacoes\SolicitacaoForm.Designer.cs">
       <DependentUpon>SolicitacaoForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\SolicitacaoForm.resx">
+    <EmbeddedResource Include="Telas\Solicitacoes\SolicitacaoForm.resx">
       <DependentUpon>SolicitacaoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\SolicitacaoForm.cs">
+    <Compile Include="Telas\Solicitacoes\SolicitacaoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Quermesse\EscalaForm.Designer.cs">
+    <Compile Include="Telas\Escalas\EscalaForm.Designer.cs">
       <DependentUpon>EscalaForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\EscalaForm.resx">
+    <EmbeddedResource Include="Telas\Escalas\EscalaForm.resx">
       <DependentUpon>EscalaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\EscalaForm.cs">
+    <Compile Include="Telas\Escalas\EscalaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Quermesse\QuermesseForm.Designer.cs">
+    <Compile Include="Telas\Eventos\QuermesseForm.Designer.cs">
       <DependentUpon>QuermesseForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\QuermesseForm.resx">
+    <EmbeddedResource Include="Telas\Eventos\QuermesseForm.resx">
       <DependentUpon>QuermesseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\QuermesseForm.cs">
+    <Compile Include="Telas\Eventos\QuermesseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Quermesse\ApuracaoControl.Designer.cs">
+    <Compile Include="Telas\Financeiro\ApuracaoControl.Designer.cs">
       <DependentUpon>ApuracaoControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\ApuracaoControl.resx">
+    <EmbeddedResource Include="Telas\Financeiro\ApuracaoControl.resx">
       <DependentUpon>ApuracaoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\ApuracaoControl.cs">
+    <Compile Include="Telas\Financeiro\ApuracaoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Quermesse\SolicitacoesControl.Designer.cs">
+    <Compile Include="Telas\Solicitacoes\SolicitacoesControl.Designer.cs">
       <DependentUpon>SolicitacoesControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\SolicitacoesControl.resx">
+    <EmbeddedResource Include="Telas\Solicitacoes\SolicitacoesControl.resx">
       <DependentUpon>SolicitacoesControl.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\SolicitacoesControl.cs">
+    <Compile Include="Telas\Solicitacoes\SolicitacoesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Quermesse\EscalaControl.Designer.cs">
+    <Compile Include="Telas\Escalas\EscalaControl.Designer.cs">
       <DependentUpon>EscalaControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\EscalaControl.resx">
+    <EmbeddedResource Include="Telas\Escalas\EscalaControl.resx">
       <DependentUpon>EscalaControl.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\EscalaControl.cs">
+    <Compile Include="Telas\Escalas\EscalaControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Quermesse\QuermessesControl.Designer.cs">
+    <Compile Include="Telas\Eventos\QuermessesControl.Designer.cs">
       <DependentUpon>QuermessesControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\QuermessesControl.resx">
+    <EmbeddedResource Include="Telas\Eventos\QuermessesControl.resx">
       <DependentUpon>QuermessesControl.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\QuermessesControl.cs">
+    <Compile Include="Telas\Eventos\QuermessesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Quermesse\QuermessePreview.cs" />
-    <Compile Include="Quermesse\RegistrosControl.Designer.cs">
+    <Compile Include="DadosExemplo\QuermessePreview.cs" />
+    <Compile Include="Telas\Registros\RegistrosControl.Designer.cs">
       <DependentUpon>RegistrosControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\RegistrosControl.resx">
+    <EmbeddedResource Include="Telas\Registros\RegistrosControl.resx">
       <DependentUpon>RegistrosControl.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\RegistrosControl.cs">
+    <Compile Include="Telas\Registros\RegistrosControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Quermesse\QuermesseDashboardControl.Designer.cs">
+    <Compile Include="Telas\Dashboard\QuermesseDashboardControl.Designer.cs">
       <DependentUpon>QuermesseDashboardControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\QuermesseDashboardControl.resx">
+    <EmbeddedResource Include="Telas\Dashboard\QuermesseDashboardControl.resx">
       <DependentUpon>QuermesseDashboardControl.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\QuermesseDashboardControl.cs">
+    <Compile Include="Telas\Dashboard\QuermesseDashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Quermesse\EquipeSetoresControl.Designer.cs">
+    <Compile Include="Telas\Equipe\EquipeSetoresControl.Designer.cs">
       <DependentUpon>EquipeSetoresControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\EquipeSetoresControl.resx">
+    <EmbeddedResource Include="Telas\Equipe\EquipeSetoresControl.resx">
       <DependentUpon>EquipeSetoresControl.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\EquipeSetoresControl.cs">
+    <Compile Include="Telas\Equipe\EquipeSetoresControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Quermesse\FinanceiroControl.Designer.cs">
+    <Compile Include="Telas\Financeiro\FinanceiroControl.Designer.cs">
       <DependentUpon>FinanceiroControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Quermesse\FinanceiroControl.resx">
+    <EmbeddedResource Include="Telas\Financeiro\FinanceiroControl.resx">
       <DependentUpon>FinanceiroControl.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Quermesse\FinanceiroControl.cs">
+    <Compile Include="Telas\Financeiro\FinanceiroControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
 
     <Compile Include="Utils\GraficoPreview.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="CadastroForm.resx">
+    <EmbeddedResource Include="Telas\Acesso\CadastroForm.resx">
       <DependentUpon>CadastroForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashboardControl.resx">
+    <EmbeddedResource Include="Telas\Dashboard\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Telas\Acesso\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrincipalForm.resx">
+    <EmbeddedResource Include="Telas\Principal\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProdutoForm.resx">
+    <EmbeddedResource Include="Telas\Produtos\ProdutoForm.resx">
       <DependentUpon>ProdutoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProdutosControl.resx">
+    <EmbeddedResource Include="Telas\Produtos\ProdutosControl.resx">
       <DependentUpon>ProdutosControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -304,85 +304,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Sem título2.png" />
+    <None Include="Resources\FundoLogin.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\package%282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\triangle-alert.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\package-plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\package-minus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CASE_logo_login_otimizada.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sem título.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Fundo Tecnológico Azul com Logo CASE.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sem título1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sem título3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\layout-dashboard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\layout-dashboard%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\package.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\warehouse.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\arrow-left-right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\chart-no-axes-column-increasing.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\log-out.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\circle-user-round.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\circle-user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\circle-user%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\circle-user%282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bell%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sem título4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\package1.png" />
+    <None Include="Resources\LogoMenu.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Lucide\*.svg" />

@@ -198,7 +198,7 @@ namespace CASE
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
-            this.BackgroundImage = global::CASE.Properties.Resources.Sem_título2;
+            this.BackgroundImage = global::CASE.Properties.Resources.FundoLogin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(834, 511);
             this.Controls.Add(this.panelLogin);

@@ -543,7 +543,7 @@
             // 
             // pictureLogoMenu
             // 
-            this.pictureLogoMenu.Image = global::CASE.Properties.Resources.Sem_título3;
+            this.pictureLogoMenu.Image = global::CASE.Properties.Resources.LogoMenu;
             this.pictureLogoMenu.Location = new System.Drawing.Point(15, 15);
             this.pictureLogoMenu.Name = "pictureLogoMenu";
             this.pictureLogoMenu.Size = new System.Drawing.Size(200, 75);
