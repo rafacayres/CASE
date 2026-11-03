@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using CASE.Utils;
 
@@ -25,10 +25,6 @@ namespace CASE
             panelAcoesProdutos.SizeChanged += AjustarArredondamento;
             panelListaProdutos.SizeChanged += AjustarArredondamento;
             cmbFiltroCategoria.SelectedIndex = 0;
-            dgvProdutos.Rows.Add("001", "Refrigerante", "Bebidas", "120", "6,00");
-            dgvProdutos.Rows.Add("002", "Água mineral", "Bebidas", "80", "4,00");
-            dgvProdutos.Rows.Add("003", "Cachorro-quente", "Alimentação", "65", "12,00");
-            dgvProdutos.Rows.Add("004", "Bolo de milho", "Doces", "35", "5,00");
             colCodigo.Visible = false;
             var imagem = new DataGridViewImageColumn { Name = "colImagemProduto", HeaderText = "Imagem",
                 ImageLayout = DataGridViewImageCellLayout.Zoom, FillWeight = 65 };

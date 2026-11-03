@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using CASE.Utils;
 
@@ -35,9 +35,6 @@ namespace CASE.Quermesse
         }
         private void CarregarExemplos()
         {
-            dgvSolicitacoesQuermesse.Rows.Add(new object[] { "22/10 18:10", "Marina Souza", "Bebidas", "Reposição", "Água mineral", "20", "Pendente" });
-            dgvSolicitacoesQuermesse.Rows.Add(new object[] { "22/10 18:25", "Pedro Lima", "Alimentação", "Ocorrência", "Pastel", "2", "Em atendimento" });
-            dgvSolicitacoesQuermesse.Rows.Add(new object[] { "22/10 16:40", "Julia Santos", "Doces", "Reposição", "Bolo de milho", "10", "Concluída" });
             dgvSolicitacoesQuermesse.ClearSelection();
         }
     }

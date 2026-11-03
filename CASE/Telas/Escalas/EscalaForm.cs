@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using CASE.Utils;
 
@@ -12,8 +12,11 @@ namespace CASE.Quermesse
         {
             InitializeComponent();
             cmbEventoEscala.Items.Clear();
-            cmbEventoEscala.Items.Add(exemplos.Evento);
-            cmbEventoEscala.SelectedIndex = 0;
+            if (!string.IsNullOrWhiteSpace(exemplos.Evento))
+            {
+                cmbEventoEscala.Items.Add(exemplos.Evento);
+                cmbEventoEscala.SelectedIndex = 0;
+            }
             FrontendTheme.Aplicar(this);
         }
 

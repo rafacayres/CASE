@@ -1,4 +1,4 @@
-﻿namespace CASE.Quermesse
+namespace CASE.Quermesse
 {
     partial class PessoaSetorForm
     {
@@ -189,7 +189,7 @@
             this.lblSetorbarraca.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
             this.lblSetorbarraca.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
             this.lblSetorbarraca.TabIndex = 11;
-            this.lblSetorbarraca.Text = "Setor / barraca";
+            this.lblSetorbarraca.Text = "Setor";
             this.lblSetorbarraca.TextAlign = (System.Drawing.ContentAlignment)1;
             // cmbSetorFuncionario
             this.cmbSetorFuncionario.Name = "cmbSetorFuncionario";

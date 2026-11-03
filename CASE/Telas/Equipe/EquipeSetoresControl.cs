@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using CASE.Utils;
 
@@ -45,16 +45,7 @@ namespace CASE.Quermesse
         }
         private void CarregarExemplos()
         {
-            dgvEquipe.Rows.Add(new object[] { "Rafael Cayres", "rafael", "Administrador", "Organização", "Noite", "Ativo" });
-            dgvEquipe.Rows.Add(new object[] { "Ana Silva", "ana", "Gerente", "Gestão", "Noite", "Ativo" });
-            dgvEquipe.Rows.Add(new object[] { "Marina Souza", "marina", "Vendedor", "Bebidas", "Noite", "Ativo" });
-            dgvEquipe.Rows.Add(new object[] { "Pedro Lima", "pedro", "Vendedor", "Alimentação", "Noite", "Ativo" });
-            dgvEquipe.Rows.Add(new object[] { "Julia Santos", "julia", "Vendedor", "Doces", "Tarde", "Ativo" });
             dgvEquipe.ClearSelection();
-            dgvSetores.Rows.Add(new object[] { "Bebidas", "1", "1" });
-            dgvSetores.Rows.Add(new object[] { "Alimentação", "1", "1" });
-            dgvSetores.Rows.Add(new object[] { "Doces", "1", "1" });
-            dgvSetores.Rows.Add(new object[] { "Brincadeiras", "0", "0" });
             dgvSetores.ClearSelection();
             for (int i = 0; i < exemplos.Pessoas.Count; i++) dgvEquipe.Rows[i].Tag = exemplos.Pessoas[i];
         }

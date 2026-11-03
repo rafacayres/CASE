@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 using CASE.Utils;
@@ -53,7 +53,6 @@ namespace CASE.Quermesse
             var pessoa = cmbPessoaRegistro.SelectedItem as PessoaPreview;
             if (pessoa != null) registros = registros.Where(r => r.PessoaId == pessoa.Id);
             foreach (var r in registros.OrderByDescending(r => r.Data))
-                dgvRegistrosEquipe.Rows.Add(r.Data.ToString("dd/MM HH:mm"), r.Pessoa, r.Setor, r.Turno, r.Tipo, r.Produto, r.Quantidade, r.Observacao);
             dgvRegistrosEquipe.ClearSelection();
         }
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 using CASE.Utils;
@@ -32,7 +32,6 @@ namespace CASE.Quermesse
             var registros = exemplos.Registros.AsEnumerable();
             if (exemplos.Atual.Perfil == PerfilUsuario.Vendedor) registros = registros.Where(r => r.PessoaId == exemplos.Atual.Id);
             foreach (var registro in registros.OrderByDescending(r => r.Data))
-                dgvAtividade.Rows.Add(registro.Pessoa, registro.Setor, registro.Turno, registro.Tipo, registro.Produto, registro.Quantidade);
             dgvAtividade.ClearSelection();
         }
 

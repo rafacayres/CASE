@@ -1,4 +1,4 @@
-﻿namespace CASE.Quermesse
+namespace CASE.Quermesse
 {
     partial class EscalaControl
     {
@@ -71,7 +71,7 @@
             this.lblSubtitulo.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
             this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
             this.lblSubtitulo.TabIndex = 2;
-            this.lblSubtitulo.Text = "Distribuição dos funcionários por barraca, data e horário";
+            this.lblSubtitulo.Text = "Distribuição da equipe por setor, data e horário";
             this.lblSubtitulo.TextAlign = (System.Drawing.ContentAlignment)1;
             // panelCorpo
             this.panelCorpo.Name = "panelCorpo";
@@ -100,7 +100,7 @@
             this.lblSetorbarraca.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
             this.lblSetorbarraca.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
             this.lblSetorbarraca.TabIndex = 0;
-            this.lblSetorbarraca.Text = "Setor / barraca";
+            this.lblSetorbarraca.Text = "Setor";
             this.lblSetorbarraca.TextAlign = (System.Drawing.ContentAlignment)1;
             // cmbFiltroEscala
             this.cmbFiltroEscala.Name = "cmbFiltroEscala";

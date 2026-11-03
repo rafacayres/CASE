@@ -13,7 +13,7 @@ namespace CASE
             InitializeComponent();
             if (System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime) return;
             cmbLocal.Items.AddRange(OperacoesPreview.Locais);
-            cmbLocal.SelectedIndex = 0;
+            if (cmbLocal.Items.Count > 0) cmbLocal.SelectedIndex = 0;
             cmbLocal.SelectedIndexChanged += (s, e) => Atualizar();
             btnEntrada.Click += RegistrarEntrada;
             btnTransferir.Click += TransferirEstoque;
@@ -82,7 +82,6 @@ namespace CASE
             dgvSaldos.Rows.Clear();
             dgvHistorico.Rows.Clear();
             foreach (string produto in OperacoesPreview.Produtos)
-                dgvSaldos.Rows.Add(produto, OperacoesPreview.Saldo(cmbLocal.Text, produto).ToString("N2"), "un");
             foreach (var movimento in OperacoesPreview.Movimentos.Where(m => m.Local == cmbLocal.Text).OrderByDescending(m => m.Data))
                 dgvHistorico.Rows.Add(movimento.Data.ToString("dd/MM/yyyy HH:mm"), movimento.Produto, movimento.Tipo,
                     movimento.Quantidade.ToString("+0.##;-0.##;0"), movimento.Referencia);

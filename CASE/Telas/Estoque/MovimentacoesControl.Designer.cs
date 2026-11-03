@@ -1,4 +1,4 @@
-﻿namespace CASE
+namespace CASE
 {
     partial class MovimentacoesControl
     {

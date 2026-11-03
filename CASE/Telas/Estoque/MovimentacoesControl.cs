@@ -32,10 +32,6 @@ namespace CASE
             dgvMovimentacoes.Height = 260;
             btnNovaMovimentacao.Text = "Filtrar";
             dgvMovimentacoesColMotivo.Visible = false;
-            dgvMovimentacoes.Rows.Add("06/10/2026", "Notebook Dell", "Entrada", "5", "Rafael", "Compra");
-            dgvMovimentacoes.Rows.Add("05/10/2026", "Mouse Logitech", "Saída", "2", "Rafael", "Venda");
-            dgvMovimentacoes.Rows.Add("04/10/2026", "Teclado Mecânico", "Entrada", "10", "Rafael", "Compra");
-            dgvMovimentacoes.Rows.Add("03/10/2026", "Monitor LG", "Saída", "1", "Rafael", "Venda");
             dtpDataInicial.Value = new DateTime(2026, 10, 1);
             dtpDataFinal.Value = new DateTime(2026, 10, 31);
             cmbTipoMovimentacao.SelectedIndex = 0;

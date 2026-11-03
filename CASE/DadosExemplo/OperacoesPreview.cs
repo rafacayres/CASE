@@ -28,29 +28,12 @@ namespace CASE
             public string Produto, Local, Tipo, Referencia;
             public decimal Quantidade;
         }
-        public static readonly string[] Locais = { "Depósito central", "São João 2026 · Bebidas", "São João 2026 · Alimentação", "São João 2026 · Doces" };
-        public static readonly string[] Produtos = { "Refrigerante", "Água mineral", "Cachorro-quente", "Bolo de milho", "Paçoca" };
-        public static readonly List<Fornecedor> Fornecedores = new List<Fornecedor> {
-            new Fornecedor { Nome = "Distribuidora Silva", Email = "contato@example.com", Documento = "", Telefone = "" },
-            new Fornecedor { Nome = "Mercado da Comunidade", Email = "mercado@example.com", Documento = "", Telefone = "" }
-        };
-        public static readonly List<Conta> Contas = new List<Conta> {
-            new Conta { Nome = "Marina Souza", Login = "marina.souza", Email = "marina@example.com" },
-            new Conta { Nome = "Pedro Lima", Login = "pedro.lima", Email = "pedro@example.com" },
-            new Conta { Nome = "Ana Silva", Login = "ana", Email = "ana@example.com", Situacao = "Aprovado" },
-            new Conta { Nome = "Rafael Cayres", Login = "rafael", Email = "rafael@example.com", Situacao = "Aprovado", Perfil = "Administrador" },
-            new Conta { Nome = "Conta de exemplo", Login = "exemplo", Email = "exemplo@example.com", Situacao = "Rejeitado", Motivo = "Cadastro duplicado" }
-        };
+        public static readonly string[] Locais = new string[0];
+        public static readonly string[] Produtos = new string[0];
+        public static readonly List<Fornecedor> Fornecedores = new List<Fornecedor>();
+        public static readonly List<Conta> Contas = new List<Conta>();
         public static readonly List<Movimento> Movimentos = new List<Movimento>();
         private static int sequencia;
-
-        static OperacoesPreview()
-        {
-            foreach (string produto in Produtos)
-                Movimentos.Add(new Movimento { Data = DateTime.Today, Local = Locais[0], Produto = produto, Tipo = "Saldo inicial", Quantidade = 100, Referencia = "Amostra" });
-            Movimentos.Add(new Movimento { Data = DateTime.Today, Local = Locais[1], Produto = Produtos[0], Tipo = "Saldo inicial", Quantidade = 12, Referencia = "Amostra" });
-            Movimentos.Add(new Movimento { Data = DateTime.Today, Local = Locais[1], Produto = Produtos[1], Tipo = "Saldo inicial", Quantidade = 8, Referencia = "Amostra" });
-        }
 
         public static decimal Saldo(string local, string produto)
         {

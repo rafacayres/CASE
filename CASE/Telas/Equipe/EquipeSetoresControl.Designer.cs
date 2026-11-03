@@ -1,4 +1,4 @@
-﻿namespace CASE.Quermesse
+namespace CASE.Quermesse
 {
     partial class EquipeSetoresControl
     {
@@ -76,7 +76,7 @@
             this.lblSubtitulo.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
             this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
             this.lblSubtitulo.TabIndex = 2;
-            this.lblSubtitulo.Text = "Defina quem trabalha em cada barraca, seu turno e seu perfil de acesso";
+            this.lblSubtitulo.Text = "Defina a equipe por setor, turno e perfil de acesso";
             this.lblSubtitulo.TextAlign = (System.Drawing.ContentAlignment)1;
             // panelCorpo
             this.panelCorpo.Name = "panelCorpo";
@@ -202,7 +202,7 @@
             this.lblSetoresbarracas.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
             this.lblSetoresbarracas.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
             this.lblSetoresbarracas.TabIndex = 0;
-            this.lblSetoresbarracas.Text = "Setores / barracas";
+            this.lblSetoresbarracas.Text = "Setores";
             this.lblSetoresbarracas.TextAlign = (System.Drawing.ContentAlignment)1;
             // txtNovoSetor
             this.txtNovoSetor.Name = "txtNovoSetor";

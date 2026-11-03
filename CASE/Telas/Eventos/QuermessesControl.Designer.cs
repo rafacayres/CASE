@@ -1,4 +1,4 @@
-﻿namespace CASE.Quermesse
+namespace CASE.Quermesse
 {
     partial class QuermessesControl
     {
@@ -114,7 +114,7 @@
             this.lblQuermessedeSaoJoao2026.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
             this.lblQuermessedeSaoJoao2026.ForeColor = System.Drawing.Color.FromArgb(255, 30, 51, 75);
             this.lblQuermessedeSaoJoao2026.TabIndex = 1;
-            this.lblQuermessedeSaoJoao2026.Text = "Quermesse de São João 2026";
+            this.lblQuermessedeSaoJoao2026.Text = "Eventos";
             this.lblQuermessedeSaoJoao2026.TextAlign = (System.Drawing.ContentAlignment)1;
             // lblPatiodacomunidadeEmandamento
             this.lblPatiodacomunidadeEmandamento.Name = "lblPatiodacomunidadeEmandamento";
@@ -125,7 +125,7 @@
             this.lblPatiodacomunidadeEmandamento.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
             this.lblPatiodacomunidadeEmandamento.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
             this.lblPatiodacomunidadeEmandamento.TabIndex = 2;
-            this.lblPatiodacomunidadeEmandamento.Text = "Pátio da comunidade · Em andamento";
+            this.lblPatiodacomunidadeEmandamento.Text = "";
             this.lblPatiodacomunidadeEmandamento.TextAlign = (System.Drawing.ContentAlignment)1;
             // btnNovaQuermesse
             this.btnNovaQuermesse.Name = "btnNovaQuermesse";

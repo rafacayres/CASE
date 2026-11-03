@@ -1,4 +1,4 @@
-﻿namespace CASE.Quermesse
+namespace CASE.Quermesse
 {
     partial class SolicitacoesControl
     {
@@ -73,7 +73,7 @@
             this.lblSubtitulo.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
             this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
             this.lblSubtitulo.TabIndex = 2;
-            this.lblSubtitulo.Text = "Pedidos de reposição e comunicação entre as barracas e a organização";
+            this.lblSubtitulo.Text = "Pedidos de reposição e comunicação entre a equipe e a organização";
             this.lblSubtitulo.TextAlign = (System.Drawing.ContentAlignment)1;
             // panelCorpo
             this.panelCorpo.Name = "panelCorpo";

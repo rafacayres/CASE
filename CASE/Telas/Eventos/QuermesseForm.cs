@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using CASE.Utils;
 
@@ -14,9 +14,9 @@ namespace CASE.Quermesse
             if (editar)
             {
                 Text = lblTitulo.Text = "Editar evento";
-                txtNomeQuermesse.Text = "Quermesse de São João 2026";
+                txtNomeQuermesse.Clear();
                 txtLocalQuermesse.Text = "Pátio da comunidade";
-                txtResponsavelQuermesse.Text = "Rafael Cayres";
+                txtResponsavelQuermesse.Clear();
                 cmbSituacaoQuermesse.SelectedIndex = 1;
             }
             FrontendTheme.Aplicar(this);

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using CASE.Utils;
 
@@ -26,7 +26,6 @@ namespace CASE.Quermesse
         }
         private void CarregarExemplos()
         {
-            dgvQuermesses.Rows.Add(new object[] { "São João 2026", "Quermesse", "Pátio da comunidade", "22/10/2026", "25/10/2026", "Rafael Cayres", "Em andamento" });
             dgvQuermesses.ClearSelection();
         }
     }

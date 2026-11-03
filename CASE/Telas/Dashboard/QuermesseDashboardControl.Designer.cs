@@ -1,4 +1,4 @@
-﻿namespace CASE.Quermesse
+namespace CASE.Quermesse
 {
     partial class QuermesseDashboardControl
     {
@@ -92,7 +92,7 @@
             this.lblSubtitulo.BackColor = System.Drawing.Color.FromArgb(255, 246, 248, 252);
             this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
             this.lblSubtitulo.TabIndex = 2;
-            this.lblSubtitulo.Text = "Quermesse de São João 2026 · Organização · turno Noite";
+            this.lblSubtitulo.Text = "Visão geral do evento";
             this.lblSubtitulo.TextAlign = (System.Drawing.ContentAlignment)1;
             // panelCorpo
             this.panelCorpo.Name = "panelCorpo";

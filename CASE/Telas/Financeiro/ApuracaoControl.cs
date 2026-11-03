@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using CASE.Utils;
 
@@ -22,7 +22,6 @@ namespace CASE.Quermesse
         {
             dgvApuracao.Rows.Clear();
             if (cmbSetorApuracao.SelectedIndex == 0 && cmbTurnoApuracao.Text == "Noite" && dtpApuracao.Value.Date == DateTime.Today)
-                dgvApuracao.Rows.Add("Marina Souza", "Bebidas", "Noite", "9", "R$ 54,00");
             dgvApuracao.ClearSelection();
         }
 

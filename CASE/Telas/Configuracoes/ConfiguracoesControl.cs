@@ -28,8 +28,6 @@ namespace CASE
             btnAprovarSolicitacao.SizeChanged += AjustarArredondamento;
             VisualUtils.Arredondar(btnRejeitarSolicitacao, 8);
             btnRejeitarSolicitacao.SizeChanged += AjustarArredondamento;
-            dgvSolicitacoes.Rows.Add(new object[] { "Marina Souza", "marina.souza", "marina@example.com", "01/10/2026", "Pendente" });
-            dgvSolicitacoes.Rows.Add(new object[] { "Pedro Lima", "pedro.lima", "pedro@example.com", "02/10/2026", "Pendente" });
             dgvSolicitacoes.ClearSelection();
             lblSubtituloConfiguracoes.Text = "Gerencie suas informações e preferências";
             txtPerfilNome.Text = "Rafael Cayres";

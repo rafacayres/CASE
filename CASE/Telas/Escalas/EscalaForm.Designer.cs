@@ -1,4 +1,4 @@
-﻿namespace CASE.Quermesse
+namespace CASE.Quermesse
 {
     partial class EscalaForm
     {
@@ -133,7 +133,7 @@
             this.cmbEventoEscala.TabIndex = 6;
             this.cmbEventoEscala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEventoEscala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbEventoEscala.Items.AddRange(new object[] { "Quermesse de São João 2026" });
+            this.cmbEventoEscala.Items.Clear();
             this.cmbEventoEscala.SelectedIndex = 0;
             // lblFuncionario
             this.lblFuncionario.Name = "lblFuncionario";
@@ -168,7 +168,7 @@
             this.lblSetorbarraca.BackColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
             this.lblSetorbarraca.ForeColor = System.Drawing.Color.FromArgb(255, 115, 132, 151);
             this.lblSetorbarraca.TabIndex = 9;
-            this.lblSetorbarraca.Text = "Setor / barraca";
+            this.lblSetorbarraca.Text = "Setor";
             this.lblSetorbarraca.TextAlign = (System.Drawing.ContentAlignment)1;
             // cmbSetorEscala
             this.cmbSetorEscala.Name = "cmbSetorEscala";

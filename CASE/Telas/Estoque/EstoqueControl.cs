@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using CASE.Utils;
 
@@ -40,11 +40,6 @@ namespace CASE
             txtPesquisarEstoque.Visible = cmbCategoriaEstoque.Visible = cmbStatusEstoque.Visible = false;
             btnAtualizarEstoque.Visible = false;
             dgvEstoqueColCodigo.Visible = dgvEstoqueColIdeal.Visible = false;
-            dgvEstoque.Rows.Add("001", "Refrigerante", "Bebidas", "120", "30", "150", "Em estoque");
-            dgvEstoque.Rows.Add("002", "Água mineral", "Bebidas", "8", "20", "100", "Estoque baixo");
-            dgvEstoque.Rows.Add("003", "Cachorro-quente", "Alimentação", "5", "10", "80", "Estoque baixo");
-            dgvEstoque.Rows.Add("004", "Bolo de milho", "Doces", "2", "5", "40", "Estoque baixo");
-            dgvEstoque.Rows.Add("005", "Paçoca", "Doces", "0", "10", "50", "Sem estoque");
             string[] filtros = { "Todos", "Em estoque", "Estoque baixo", "Sem estoque" };
             var botoes = new System.Collections.Generic.List<Button>();
             for (int i = 0; i < filtros.Length; i++)

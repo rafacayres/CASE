@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 using System.Drawing;
 using System.Linq;
@@ -60,8 +60,8 @@ namespace CASE
                 VisualUtils.Arredondar(botao, 8);
                 botao.SizeChanged += (s, e) => VisualUtils.Arredondar(botao, 8);
             }
-            usuarioPreview.Items.AddRange(exemplos.Pessoas.Cast<object>().ToArray());
-            usuarioPreview.SelectedItem = exemplos.Atual;
+            usuarioPreview.Visible = false;
+            labelPreviewUsuario.Visible = false;
             usuarioPreview.SelectedIndexChanged += (s, e) =>
             {
                 if (usuarioPreview.SelectedItem == null) return;
@@ -80,11 +80,7 @@ namespace CASE
             AdicionarIconeMenu(buttonFornecedores, Properties.Resources.LucideMenuFornecedores);
             AdicionarIconeMenu(buttonAcessos, Properties.Resources.LucideMenuAcessos);
             buttonFornecedores.Click += (s, e) => AbrirTela(buttonFornecedores, () => new FornecedoresControl());
-            buttonAcessos.Click += (s, e) =>
-            {
-                if (exemplos.Atual.AdministradorSistema)
-                    AbrirTela(buttonAcessos, CriarGestaoAcessos);
-            };
+            buttonAcessos.Click += (s, e) => AbrirTela(buttonAcessos, CriarGestaoAcessos);
         }
 
         private Button CriarBotaoMenu(string nome, string texto)
@@ -167,15 +163,13 @@ namespace CASE
 
         private void AtualizarCabecalho()
         {
-            var conta = OperacoesPreview.Contas.FirstOrDefault(c => c.Login == exemplos.Atual.Login);
-            exemplos.Atual.AdministradorSistema = conta != null && conta.Situacao == "Aprovado" && conta.Perfil == "Administrador";
-            labelNomeUsuario.Text = exemplos.Atual.Nome;
+            labelNomeUsuario.Text = string.IsNullOrWhiteSpace(exemplos.Atual.Nome) ? "Administrador" : exemplos.Atual.Nome;
             labelTipoUsuario.Text = exemplos.Atual.AdministradorSistema ? "Administrador do sistema" : exemplos.Atual.Perfil.ToString();
             buttonAcessos.Visible = exemplos.Atual.AdministradorSistema;
             labelNomeUsuario.AutoSize = false;
             labelNomeUsuario.Size = new Size(110, 20);
             labelNomeUsuario.AutoEllipsis = true;
-            buttonMovimentacoes.Text = exemplos.Atual.Perfil == PerfilUsuario.Vendedor ? "Meus registros" : "Registros da equipe";
+            buttonMovimentacoes.Text = "Registros";
         }
 
         private UserControl CriarConfiguracoes()
