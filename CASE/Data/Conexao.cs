@@ -21,21 +21,7 @@ namespace CASE.Data
                     "A conexão CaseDb não foi encontrada no App.config.");
             }
 
-            string senha = Environment.GetEnvironmentVariable(
-                "CASE_DB_PASSWORD");
-
-            if (string.IsNullOrWhiteSpace(senha))
-            {
-                throw new InvalidOperationException(
-                    "A variável CASE_DB_PASSWORD não foi configurada.");
-            }
-
-            var builder = new MySqlConnectionStringBuilder(
-                configuracao.ConnectionString);
-
-            builder.Password = senha;
-
-            return new MySqlConnection(builder.ConnectionString);
+            return new MySqlConnection(configuracao.ConnectionString);
         }
     }   
 }

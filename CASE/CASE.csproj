@@ -108,7 +108,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Conexao.cs" />
+    <Compile Include="Models\AnaliseUsuario.cs" />
+    <Compile Include="Models\Apuracao.cs" />
+    <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Models\Despesa.cs" />
+    <Compile Include="Models\EntradaItem.cs" />
+    <Compile Include="Models\EntradaMercadoria.cs" />
+    <Compile Include="Models\EquipeEvento.cs" />
+    <Compile Include="Models\Escala.cs" />
+    <Compile Include="Models\Estoque.cs" />
+    <Compile Include="Models\EstoqueSetor.cs" />
+    <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Models\JornadaSetor.cs" />
+    <Compile Include="Models\Instituicao.cs" />
+    <Compile Include="Models\LocalEstoque.cs" />
+    <Compile Include="Models\Perfil.cs" />
+    <Compile Include="Models\PerfilSistema.cs" />
+    <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\ProdutoFornecedor.cs" />
+    <Compile Include="Models\ProdutoSetor.cs" />
+    <Compile Include="Models\Registro.cs" />
+    <Compile Include="Models\RegistroItem.cs" />
+    <Compile Include="Models\Setor.cs" />
+    <Compile Include="Models\Solicitacao.cs" />
+    <Compile Include="Models\SolicitacaoItem.cs" />
+    <Compile Include="Models\TipoEvento.cs" />
+    <Compile Include="Models\TransferenciaEstoque.cs" />
+    <Compile Include="Models\TransferenciaItem.cs" />
+    <Compile Include="Models\Turno.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Repositories\FornecedorRepository.cs" />
     <Compile Include="Telas\Acesso\CadastroForm.cs">
       <SubType>Form</SubType>
