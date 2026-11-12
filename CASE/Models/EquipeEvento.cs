@@ -1,3 +1,5 @@
+using System;
+
 namespace CASE.Models
 {
     public class EquipeEvento
@@ -7,5 +9,10 @@ namespace CASE.Models
         public int IdPessoa { get; set; }
         public int IdPerfil { get; set; }
         public bool Ativo { get; set; }
+        public int? IdUsuarioCriacao { get; set; }
+        public DateTime? CriadoEm { get; set; }
+        public int? IdUsuarioAlteracao { get; set; }
+        public DateTime? AtualizadoEm { get; set; }
+        public uint Versao { get; set; }
     }
 }

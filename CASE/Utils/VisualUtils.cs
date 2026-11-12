@@ -2,6 +2,8 @@
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace CASE.Utils
@@ -15,6 +17,38 @@ namespace CASE.Utils
         public static readonly Color Fundo = Color.FromArgb(246, 248, 252);
         public static readonly Color Borda = Color.FromArgb(228, 234, 242);
 
+        private const int EmSetMargins = 0x00D3;
+        private const int EmSetCueBanner = 0x1501;
+        private const int EcLeftMargin = 0x0001;
+        private const int EcRightMargin = 0x0002;
+
+        private static readonly ConditionalWeakTable<TextBox, EstadoVisualCampo> EstadosCampos =
+            new ConditionalWeakTable<TextBox, EstadoVisualCampo>();
+
+        private sealed class EstadoVisualCampo
+        {
+            public bool TemErro { get; set; }
+            public bool EstiloAplicado { get; set; }
+        }
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern IntPtr SendMessage(
+            IntPtr janela,
+            int mensagem,
+            IntPtr wParam,
+            IntPtr lParam);
+
+        [DllImport(
+            "user32.dll",
+            EntryPoint = "SendMessageW",
+            CharSet = CharSet.Unicode,
+            ExactSpelling = true)]
+        private static extern IntPtr SendMessageTexto(
+            IntPtr janela,
+            int mensagem,
+            IntPtr wParam,
+            string lParam);
+
         public static PictureBox CriarEspacoIcone(string nome, Rectangle area, Color fundo)
         {
             var icone = new PictureBox { Name = nome, Bounds = area, BackColor = fundo,
@@ -24,76 +58,348 @@ namespace CASE.Utils
             return icone;
         }
 
-        public static void EstilizarBotao(Button botao)
+        private sealed class EstadoBotao
         {
-            bool principal = botao.ForeColor.ToArgb() == Color.White.ToArgb();
-            botao.FlatStyle = FlatStyle.Flat;
-            botao.Cursor = Cursors.Hand;
-            botao.Font = new Font("Segoe UI", 9.5F, principal ? FontStyle.Bold : FontStyle.Regular);
-            botao.BackColor = principal ? Azul : Color.White;
-            botao.ForeColor = principal ? Color.White : Texto;
-            botao.FlatAppearance.BorderSize = principal ? 0 : 1;
-            botao.FlatAppearance.BorderColor = Borda;
-            botao.FlatAppearance.MouseOverBackColor = principal ? Color.FromArgb(20, 91, 181) : Color.FromArgb(241, 246, 252);
-            botao.FlatAppearance.MouseDownBackColor = principal ? Color.FromArgb(17, 76, 154) : Color.FromArgb(231, 239, 249);
-            Arredondar(botao, 8);
-            AcabamentoArredondado.DefinirBorda(botao, !principal);
+            public bool Principal;
         }
 
+        private static readonly ConditionalWeakTable<Button, EstadoBotao> EstadosBotoes =
+            new ConditionalWeakTable<Button, EstadoBotao>();
+
+        public static void EstilizarBotao(Button botao)
+        {
+            EstadoBotao estado;
+            if (!EstadosBotoes.TryGetValue(botao, out estado))
+            {
+                estado = new EstadoBotao();
+                estado.Principal = botao.ForeColor.ToArgb() == Color.White.ToArgb() ||
+                    botao.BackColor.ToArgb() == Azul.ToArgb();
+                EstadosBotoes.Add(botao, estado);
+                botao.EnabledChanged += (s, e) => AtualizarCoresBotao(botao, estado);
+            }
+            botao.FlatStyle = FlatStyle.Flat;
+            botao.UseVisualStyleBackColor = false;
+            FontStyle estilo = FontStyle.Regular;
+            if (estado.Principal)
+            {
+                estilo = FontStyle.Bold;
+            }
+            botao.Font = new Font("Segoe UI", 9.5F, estilo);
+            botao.TextAlign = ContentAlignment.MiddleCenter;
+            AtualizarCoresBotao(botao, estado);
+            Arredondar(botao, Math.Min(8, Math.Max(2, botao.Height / 4)));
+            AcabamentoArredondado.DefinirBorda(botao, !estado.Principal);
+        }
+
+        private static void AtualizarCoresBotao(Button botao, EstadoBotao estado)
+        {
+            botao.FlatAppearance.BorderSize = 1;
+            botao.FlatAppearance.BorderColor = Borda;
+            botao.Cursor = Cursors.Hand;
+            if (!botao.Enabled)
+            {
+                botao.BackColor = Color.FromArgb(235, 239, 244);
+                botao.ForeColor = Color.FromArgb(115, 125, 140);
+                botao.Cursor = Cursors.Default;
+            }
+            else if (estado.Principal)
+            {
+                botao.BackColor = Azul;
+                botao.ForeColor = Color.White;
+                botao.FlatAppearance.BorderSize = 0;
+                botao.FlatAppearance.MouseOverBackColor = Color.FromArgb(20, 91, 181);
+                botao.FlatAppearance.MouseDownBackColor = Color.FromArgb(17, 76, 154);
+            }
+            else
+            {
+                botao.BackColor = Color.White;
+                botao.ForeColor = Texto;
+                botao.FlatAppearance.MouseOverBackColor = Color.FromArgb(241, 246, 252);
+                botao.FlatAppearance.MouseDownBackColor = Color.FromArgb(231, 239, 249);
+            }
+        }
         public static void EstilizarCampo(TextBox campo)
         {
-            campo.BorderStyle = BorderStyle.None;
-            campo.BackColor = Color.White;
-            campo.ForeColor = Texto;
-            Control parent = campo.Parent;
-            parent.Paint += (s, e) =>
+            if (campo == null || campo.Parent == null)
             {
-                if (!campo.Visible) return;
-                var area = new Rectangle(campo.Left - 7, campo.Top - 6, campo.Width + 14, campo.Height + 12);
-                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                using (var caminho = CriarRetanguloArredondado(area, 7))
-                using (var caneta = new Pen(campo.Focused ? Azul : Borda, campo.Focused ? 1.4F : 1F))
-                    e.Graphics.DrawPath(caneta, caminho);
+                return;
+            }
+
+            EstadoVisualCampo estadoCampo = EstadosCampos.GetOrCreateValue(campo);
+
+            if (estadoCampo.EstiloAplicado)
+            {
+                return;
+            }
+
+            estadoCampo.EstiloAplicado = true;
+
+            campo.AutoSize = false;
+            campo.ForeColor = Texto;
+            campo.Cursor = Cursors.IBeam;
+
+            Control parent = campo.Parent;
+            Panel painelCampo = parent as Panel;
+            bool painelSomenteComCampo = painelCampo != null && painelCampo.Controls.Count == 1;
+
+            if (painelSomenteComCampo)
+            {
+                painelCampo.Padding = new Padding(10, 2, 10, 2);
+                painelCampo.Cursor = Cursors.IBeam;
+                campo.Margin = Padding.Empty;
+                campo.BorderStyle = BorderStyle.None;
+                campo.BackColor = painelCampo.BackColor;
+
+                if (campo.Multiline)
+                {
+                    campo.Dock = DockStyle.Fill;
+                }
+                else
+                {
+                    // O TextBox nativo desenha uma linha no topo, mesmo quando fica mais alto.
+                    // Centralizamos o controle inteiro para alinhar texto, caret e placeholder.
+                    campo.Dock = DockStyle.None;
+                    campo.AutoSize = true;
+                    campo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+                    painelCampo.Layout += (s, e) => CentralizarLinhaNoPainel(campo, painelCampo);
+                    campo.FontChanged += (s, e) => CentralizarLinhaNoPainel(campo, painelCampo);
+                    campo.DpiChangedAfterParent += (s, e) => CentralizarLinhaNoPainel(campo, painelCampo);
+                    CentralizarLinhaNoPainel(campo, painelCampo);
+                }
+
+                Arredondar(painelCampo, 7);
+                AplicarBorda(painelCampo);
+
+                painelCampo.Paint += (s, e) =>
+                {
+                    if (!campo.Visible)
+                    {
+                        return;
+                    }
+
+                    bool temErro = estadoCampo.TemErro;
+
+                    if (!temErro && !campo.Focused)
+                    {
+                        return;
+                    }
+
+                    Color corBorda = Color.FromArgb(205, 65, 75);
+
+                    if (!temErro)
+                    {
+                        corBorda = Azul;
+                    }
+
+                    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                    using (GraphicsPath caminho = CriarRetanguloArredondado(
+                        new Rectangle(1, 1, painelCampo.ClientSize.Width - 2, painelCampo.ClientSize.Height - 2),
+                        7))
+                    using (Pen caneta = new Pen(corBorda, 1.5F))
+                    {
+                        e.Graphics.DrawPath(caneta, caminho);
+                    }
+                };
+
+                campo.Enter += (s, e) => painelCampo.Invalidate();
+                campo.Leave += (s, e) => painelCampo.Invalidate();
+                painelCampo.MouseDown += (s, e) => campo.Focus();
+            }
+            else
+            {
+                // Uma borda pintada fora do TextBox pode cobrir controles vizinhos no mesmo painel.
+                campo.BorderStyle = BorderStyle.FixedSingle;
+                campo.BackColor = Color.White;
+            }
+
+            campo.HandleCreated += (s, e) => AplicarMargensInternas(campo);
+            if (campo.IsHandleCreated)
+            {
+                AplicarMargensInternas(campo);
+            }
+        }
+
+        private static void CentralizarLinhaNoPainel(TextBox campo, Panel painel)
+        {
+            int altura = campo.PreferredHeight;
+            int largura = Math.Max(0, painel.ClientSize.Width - painel.Padding.Horizontal);
+            int topo = Math.Max(0, (painel.ClientSize.Height - altura) / 2);
+            Rectangle area = new Rectangle(painel.Padding.Left, topo, largura, altura);
+
+            if (campo.Bounds != area)
+            {
+                campo.Bounds = area;
+            }
+        }
+
+        public static void DefinirPlaceholder(TextBox campo, string texto)
+        {
+            if (campo == null || string.IsNullOrWhiteSpace(texto))
+            {
+                return;
+            }
+
+            EventHandler aplicarPlaceholder = null;
+            aplicarPlaceholder = (s, e) =>
+            {
+                if (!campo.IsHandleCreated)
+                {
+                    return;
+                }
+
+                SendMessageTexto(campo.Handle, EmSetCueBanner, new IntPtr(1), texto);
+                campo.HandleCreated -= aplicarPlaceholder;
             };
-            campo.Enter += (s, e) => parent.Invalidate();
-            campo.Leave += (s, e) => parent.Invalidate();
-            campo.LocationChanged += (s, e) => parent.Invalidate();
-            campo.SizeChanged += (s, e) => parent.Invalidate();
-            campo.VisibleChanged += (s, e) => parent.Invalidate();
+
+            campo.HandleCreated += aplicarPlaceholder;
+            if (campo.IsHandleCreated)
+            {
+                aplicarPlaceholder(campo, EventArgs.Empty);
+            }
+        }
+
+        public static void DefinirEstadoErro(TextBox campo, bool temErro)
+        {
+            if (campo == null)
+            {
+                return;
+            }
+
+            EstadoVisualCampo estado = EstadosCampos.GetOrCreateValue(campo);
+            estado.TemErro = temErro;
+
+            if (campo.Parent != null)
+            {
+                campo.Parent.Invalidate();
+            }
+        }
+
+        private static void AplicarMargensInternas(TextBox campo)
+        {
+            int margem = 8;
+            int margens = margem | (margem << 16);
+            SendMessage(
+                campo.Handle,
+                EmSetMargins,
+                new IntPtr(EcLeftMargin | EcRightMargin),
+                new IntPtr(margens));
         }
 
         public static void EstilizarSelecao(ComboBox campo)
         {
-            campo.FlatStyle = FlatStyle.Flat;
+            if (campo == null)
+            {
+                return;
+            }
+
+            // A pintura nativa mantém seta, valor selecionado e foco alinhados pelo Windows.
+            campo.DrawMode = DrawMode.Normal;
+            campo.FlatStyle = FlatStyle.Standard;
             campo.BackColor = Color.White;
             campo.ForeColor = Texto;
-            campo.DrawMode = DrawMode.OwnerDrawFixed;
-            campo.ItemHeight = 23;
-            var painel = campo.Parent;
-            painel.Paint += (s, e) =>
+            if (campo.DropDownStyle == ComboBoxStyle.DropDownList)
             {
-                if (!campo.Visible) return;
-                var area = new Rectangle(campo.Left - 1, campo.Top - 2, campo.Width + 2, campo.Height + 4);
-                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                using (var caminho = CriarRetanguloArredondado(area, 7))
-                using (var caneta = new Pen(campo.Focused ? Azul : Borda))
-                    e.Graphics.DrawPath(caneta, caminho);
-            };
-            campo.Enter += (s, e) => painel.Invalidate();
-            campo.Leave += (s, e) => painel.Invalidate();
-            campo.LocationChanged += (s, e) => painel.Invalidate();
-            campo.SizeChanged += (s, e) => painel.Invalidate();
-            campo.DrawItem += (s, e) =>
+                campo.Cursor = Cursors.Hand;
+            }
+            else
             {
-                if (e.Bounds.Width <= 0 || e.Bounds.Height <= 0) return;
-                bool selecionado = (e.State & DrawItemState.Selected) != 0 && (e.State & DrawItemState.ComboBoxEdit) == 0;
-                using (var pincel = new SolidBrush(selecionado ? Color.FromArgb(237, 244, 254) : Color.White))
-                    e.Graphics.FillRectangle(pincel, e.Bounds);
-                string texto = e.Index >= 0 ? campo.GetItemText(campo.Items[e.Index]) : campo.Text;
-                var area = new Rectangle(e.Bounds.Left + 8, e.Bounds.Top, e.Bounds.Width - 12, e.Bounds.Height);
-                TextRenderer.DrawText(e.Graphics, texto, campo.Font, area, campo.Enabled ? Texto : TextoSuave,
-                    TextFormatFlags.Left | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
-            };
+                campo.Cursor = Cursors.IBeam;
+            }
+            campo.MaxDropDownItems = 12;
+            campo.IntegralHeight = true;
+            campo.DpiChangedAfterParent += (s, e) => AtualizarAlturaLista(campo);
+            Panel painel = campo.Parent as Panel;
+            if (painel != null && painel.Controls.Count == 1)
+            {
+                campo.Dock = DockStyle.None;
+                campo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+                painel.Cursor = Cursors.Hand;
+                painel.Layout += (s, e) => CentralizarSelecaoNoPainel(campo, painel);
+                campo.FontChanged += (s, e) => CentralizarSelecaoNoPainel(campo, painel);
+                painel.MouseDown += (s, e) =>
+                {
+                    if (campo.Enabled)
+                    {
+                        campo.Focus();
+                        campo.DroppedDown = true;
+                    }
+                };
+                CentralizarSelecaoNoPainel(campo, painel);
+            }
+            AtualizarAlturaLista(campo);
+        }
+
+        private static void CentralizarSelecaoNoPainel(ComboBox campo, Panel painel)
+        {
+            int altura = campo.PreferredHeight;
+            Rectangle area = new Rectangle(painel.Padding.Left,
+                Math.Max(0, (painel.ClientSize.Height - altura) / 2),
+                Math.Max(0, painel.ClientSize.Width - painel.Padding.Horizontal), altura);
+            if (campo.Bounds != area)
+            {
+                campo.Bounds = area;
+            }
+        }
+
+        public static void FiltrarGrades(Control raiz, string texto)
+        {
+            foreach (Control controle in raiz.Controls)
+            {
+                DataGridView grade = controle as DataGridView;
+                if (grade != null)
+                {
+                    System.Data.DataTable tabela = grade.DataSource as System.Data.DataTable;
+                    if (tabela != null)
+                    {
+                        // As consultas já retornam somente o escopo autorizado. Este filtro é local.
+                        string valor = texto.Replace("'", "''").Replace("[", "[[]").Replace("%", "[%]").Replace("*", "[*]");
+                        var condicoes = new System.Collections.Generic.List<string>();
+                        foreach (System.Data.DataColumn coluna in tabela.Columns)
+                        {
+                            condicoes.Add("CONVERT([" + coluna.ColumnName.Replace("]", "\\]") +
+                                "], 'System.String') LIKE '%" + valor + "%'");
+                        }
+                        tabela.DefaultView.RowFilter = string.Join(" OR ", condicoes);
+                    }
+                    else if (grade.DataSource == null)
+                    {
+                        foreach (DataGridViewRow linha in grade.Rows)
+                        {
+                            if (linha.IsNewRow)
+                            {
+                                continue;
+                            }
+                            bool corresponde = string.IsNullOrWhiteSpace(texto);
+                            foreach (DataGridViewCell celula in linha.Cells)
+                            {
+                                if (Convert.ToString(celula.FormattedValue).IndexOf(texto,
+                                    StringComparison.CurrentCultureIgnoreCase) >= 0)
+                                {
+                                    corresponde = true;
+                                    break;
+                                }
+                            }
+                            linha.Visible = corresponde;
+                        }
+                    }
+                }
+                else
+                {
+                    FiltrarGrades(controle, texto);
+                }
+            }
+        }
+
+        private static void AtualizarAlturaLista(ComboBox campo)
+        {
+            int dpi = campo.DeviceDpi;
+
+            if (dpi <= 0)
+            {
+                dpi = 96;
+            }
+
+            campo.DropDownHeight = (int)Math.Round(240F * dpi / 96F);
         }
         public static void AplicarIcone(Button botao, Image imagem)
         {

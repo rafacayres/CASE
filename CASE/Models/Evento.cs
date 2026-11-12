@@ -14,5 +14,8 @@ namespace CASE.Models
         public int IdResponsavel { get; set; }
         public string Situacao { get; set; }
         public string Observacao { get; set; }
+        public int? IdUsuarioCriacao { get; set; }
+        public DateTime? CriadoEm { get; set; }
+        public uint Versao { get; set; }
     }
 }

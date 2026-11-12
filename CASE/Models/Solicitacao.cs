@@ -10,5 +10,11 @@ namespace CASE.Models
         public string Descricao { get; set; }
         public DateTime DataHora { get; set; }
         public string Situacao { get; set; }
+        public int? IdUsuarioSolicitante { get; set; }
+        public int? IdUsuarioDecisor { get; set; }
+        public DateTime? DecididaEm { get; set; }
+        public string JustificativaRejeicao { get; set; }
+        public DateTime? CriadoEm { get; set; }
+        public uint Versao { get; set; }
     }
 }

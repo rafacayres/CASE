@@ -15,7 +15,13 @@ namespace CASE.Quermesse
         public bool AdministradorSistema { get; set; }
         public string Setor { get; set; }
         public string Turno { get; set; }
-        public bool Ativo { get; set; } = true;
+        public bool Ativo { get; set; }
+
+        public PessoaPreview()
+        {
+            Ativo = true;
+        }
+
         public override string ToString() { return Nome + " · " + Perfil; }
     }
 
@@ -38,6 +44,8 @@ namespace CASE.Quermesse
         public string Produto { get; set; }
         public int Quantidade { get; set; }
         public string Observacao { get; set; }
+        public decimal PrecoUnitario { get; set; }
+        public string FormaPagamento { get; set; }
 
     }
 
@@ -53,24 +61,31 @@ namespace CASE.Quermesse
     // Amostras fixas para montar as telas; sem operações ou regras de negócio.
     public sealed class QuermessePreview
     {
-        public string Evento { get; set; } = "";
-        public List<string> Setores { get; } = new List<string>();
-        public List<PessoaPreview> Pessoas { get; } = new List<PessoaPreview>();
-        public List<ProdutoPreview> Produtos { get; } = new List<ProdutoPreview>();
-        public List<RegistroPreview> Registros { get; } = new List<RegistroPreview>();
-        public List<CustoPreview> Custos { get; } = new List<CustoPreview>();
+        public string Evento { get; set; }
+        public List<string> Setores { get; private set; }
+        public List<PessoaPreview> Pessoas { get; private set; }
+        public List<ProdutoPreview> Produtos { get; private set; }
+        public List<RegistroPreview> Registros { get; private set; }
+        public List<CustoPreview> Custos { get; private set; }
         // Identidade local temporária para navegar pela interface enquanto o backend não existe.
-        public PessoaPreview Atual { get; set; } = new PessoaPreview
-        {
-            Nome = "Administrador",
-            Login = "admin",
-            Perfil = PerfilUsuario.Administrador,
-            AdministradorSistema = true,
-            Setor = "",
-            Turno = ""
-        };
+        public PessoaPreview Atual { get; set; }
 
-        public QuermessePreview() { }
+        public QuermessePreview()
+        {
+            Evento = string.Empty;
+            Setores = new List<string>();
+            Pessoas = new List<PessoaPreview>();
+            Produtos = new List<ProdutoPreview>();
+            Registros = new List<RegistroPreview>();
+            Custos = new List<CustoPreview>();
+            Atual = new PessoaPreview();
+            Atual.Nome = "Administrador";
+            Atual.Login = "admin";
+            Atual.Perfil = PerfilUsuario.Administrador;
+            Atual.AdministradorSistema = true;
+            Atual.Setor = string.Empty;
+            Atual.Turno = string.Empty;
+        }
 
     }
 }

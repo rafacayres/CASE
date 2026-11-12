@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CASE.Models;
+using CASE.Services;
 
 namespace CASE
 {
     public partial class DashboardControl : UserControl
     {
-        public DashboardControl()
+        private readonly Usuario usuarioAutenticado;
+        private readonly Dictionary<DateTime, decimal> quantidadesPorDia = new Dictionary<DateTime, decimal>();
+
+        public DashboardControl() : this(null)
+        {
+        }
+
+        public DashboardControl(Usuario usuario)
         {
             InitializeComponent();
+            usuarioAutenticado = usuario;
             if (LicenseManager.UsageMode == LicenseUsageMode.Designtime)
                 return;
             CASE.Utils.FrontendTheme.Aplicar(this);
@@ -32,7 +42,7 @@ namespace CASE
             BackColor = CASE.Utils.FrontendTheme.Fundo;
             AutoScroll = true;
             AutoScrollMinSize = new Size(970, 620);
-            lblSubtituloDashboard.Text = "Visão geral do seu estoque";
+            lblSubtituloDashboard.Text = "Resumo dos dados disponíveis";
             lblTituloDashboard.Font = new Font("Segoe UI", 22, FontStyle.Bold);
             lblTituloDashboard.SetBounds(80, 25, 400, 40);
             lblSubtituloDashboard.Location = new Point(82, 68);
@@ -40,32 +50,14 @@ namespace CASE
             panelIconeEstoqueBaixo.BackColor = Color.FromArgb(255, 244, 219);
             panelIconeEntradas.BackColor = Color.FromArgb(220, 247, 237);
             panelIconeSaidas.BackColor = Color.FromArgb(255, 229, 233);
-            lblTotalProdutosValor.Text = "120";
-            lblEstoqueBaixoValor.Text = "8";
-            lblEntradasMesValor.Text = "45";
-            lblSaidasMesValor.Text = "32";
-            lblTituloMovimentacoes.Text = "Produtos em destaque";
+            CarregarTotalDeProdutos();
+            CarregarEstoqueBaixo();
+            lblEntradasMesValor.Text = "—";
+            lblSaidasMesValor.Text = "—";
+            lblTituloGrafico.Text = "Movimentações sem dados consolidados";
+            lblTituloMovimentacoes.Text = "Sem dados disponíveis";
             lblTituloMovimentacoes.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            var grafico = new Panel { Name = "panelGraficoPreview", BackColor = Color.White };
-            panelGraficoMovimentacoes.Controls.Add(grafico);
-            CASE.Utils.FrontendTheme.Grafico(grafico, "linhas");
-            string[] nomes = { "Notebook Dell", "Mouse Logitech", "Teclado Mecânico", "Monitor LG" };
-            string[] quantidades = { "12 unidades", "3 unidades", "25 unidades", "5 unidades" };
-            for (int i = 0; i < nomes.Length; i++)
-            {
-                var linha = new Panel { Name = "produtoDestaque" + i, Height = 65, BackColor = Color.White };
-                linha.Controls.Add(new PictureBox { Name = "pictureProduto" + i,
-                    Bounds = new Rectangle(12, 12, 38, 38), BackColor = Color.FromArgb(240, 245, 251),
-                    SizeMode = PictureBoxSizeMode.Zoom, AccessibleName = "Imagem de " + nomes[i] });
-                linha.Controls.Add(CASE.Utils.FrontendTheme.Legenda(nomes[i], new Rectangle(60, 9, 180, 22)));
-                linha.Controls.Add(CASE.Utils.FrontendTheme.Legenda(quantidades[i], new Rectangle(60, 32, 150, 20)));
-                var status = CASE.Utils.FrontendTheme.Legenda(i % 2 == 0 ? "Em estoque" : "Estoque baixo", new Rectangle(245, 19, 105, 24));
-                status.BackColor = i % 2 == 0 ? Color.FromArgb(222, 247, 238) : Color.FromArgb(255, 234, 236);
-                status.ForeColor = i % 2 == 0 ? Color.SeaGreen : Color.Firebrick;
-                status.TextAlign = ContentAlignment.MiddleCenter;
-                linha.Controls.Add(status);
-                panelMovimentacoesRecentes.Controls.Add(linha);
-            }
+            CarregarMovimentosReais();
             EventHandler ajustar = (s, e) =>
             {
                 int largura = Math.Max(970, ClientSize.Width) - 60;
@@ -81,19 +73,201 @@ namespace CASE
                 int altura = Math.Max(330, ClientSize.Height - 278);
                 panelGraficoMovimentacoes.SetBounds(30, 244, largura - direita - 16, altura);
                 panelMovimentacoesRecentes.SetBounds(30 + largura - direita, 244, direita, altura);
-                grafico.SetBounds(12, 52, panelGraficoMovimentacoes.Width - 24, altura - 66);
-                for (int i = 0; i < 4; i++)
-                {
-                    var linha = panelMovimentacoesRecentes.Controls["produtoDestaque" + i];
-                    linha.SetBounds(8, 54 + i * 65, direita - 16, 65);
-                    linha.Controls[3].Left = linha.Width - 114;
-                    linha.Controls[1].Width = linha.Width - 178;
-                }
                 CASE.Utils.VisualUtils.Arredondar(panelGraficoMovimentacoes, 12);
                 CASE.Utils.VisualUtils.Arredondar(panelMovimentacoesRecentes, 12);
             };
             SizeChanged += ajustar;
             ajustar(this, EventArgs.Empty);
+        }
+
+        private void CarregarTotalDeProdutos()
+        {
+            try
+            {
+                string perfil;
+                new AutorizacaoService().ValidarUsuarioEObterPerfil(usuarioAutenticado, out perfil);
+                if (perfil == "Membro")
+                {
+                    HashSet<int> produtos = new HashSet<int>();
+                    foreach (DataRow linha in new ConsultaOperacionalService().Estoques(usuarioAutenticado).Rows)
+                    {
+                        produtos.Add(Convert.ToInt32(linha["id_produto"]));
+                    }
+                    lblTotalProdutosValor.Text = produtos.Count.ToString();
+                    return;
+                }
+                ProdutoService produtoService = new ProdutoService();
+                int totalProdutos = produtoService.Contar(usuarioAutenticado);
+                lblTotalProdutosValor.Text = totalProdutos.ToString();
+            }
+            catch (Exception)
+            {
+                lblTotalProdutosValor.Text = "—";
+                lblSubtituloDashboard.Text = "Não foi possível carregar os dados do banco.";
+            }
+        }
+
+        private void CarregarEstoqueBaixo()
+        {
+            try
+            {
+                LocalEstoqueService localService = new LocalEstoqueService();
+                EstoqueService estoqueService = new EstoqueService();
+                List<CASE.Models.LocalEstoque> locais = localService.Listar(
+                    usuarioAutenticado);
+                int quantidadeEstoqueBaixo = 0;
+
+                foreach (CASE.Models.LocalEstoque local in locais)
+                {
+                    List<CASE.Models.Estoque> saldos = estoqueService.ListarPorLocal(
+                        usuarioAutenticado,
+                        local.IdLocalEstoque);
+
+                    foreach (CASE.Models.Estoque estoque in saldos)
+                    {
+                        if (estoque.QuantidadeAtual <= estoque.QuantidadeMinima)
+                        {
+                            quantidadeEstoqueBaixo++;
+                        }
+                    }
+                }
+
+                lblEstoqueBaixoValor.Text = quantidadeEstoqueBaixo.ToString();
+            }
+            catch (Exception)
+            {
+                lblEstoqueBaixoValor.Text = "—";
+            }
+        }
+
+        private void CarregarMovimentosReais()
+        {
+            try
+            {
+                DateTime inicio = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+                DataTable movimentos = new ConsultaOperacionalService().Movimentacoes(
+                    usuarioAutenticado, inicio, DateTime.Today);
+                decimal entradas = 0;
+                decimal saidas = 0;
+                ListBox recentes = new ListBox();
+                recentes.BorderStyle = BorderStyle.None;
+                recentes.Font = new Font("Segoe UI", 9F);
+                recentes.SetBounds(16, 62, panelMovimentacoesRecentes.Width - 32, panelMovimentacoesRecentes.Height - 80);
+                recentes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+                recentes.HorizontalScrollbar = true;
+                foreach (DataRow movimento in movimentos.Rows)
+                {
+                    decimal quantidade = Convert.ToDecimal(movimento["quantidade"]);
+                    string tipo = Convert.ToString(movimento["tipo"]);
+                    if (tipo == "entrada")
+                    {
+                        entradas += quantidade;
+                    }
+                    else if (tipo == "venda" || tipo == "perda")
+                    {
+                        saidas += quantidade;
+                    }
+                    DateTime dia = Convert.ToDateTime(movimento["data_hora"]).Date;
+                    if (!quantidadesPorDia.ContainsKey(dia))
+                    {
+                        quantidadesPorDia.Add(dia, 0);
+                    }
+                    quantidadesPorDia[dia] += quantidade;
+                    if (recentes.Items.Count < 20)
+                    {
+                        recentes.Items.Add(dia.ToString("dd/MM") + " · " + tipo + " · " +
+                            movimento["produto"] + " · " + quantidade.ToString("N0"));
+                    }
+                }
+                lblEntradasMesValor.Text = entradas.ToString("N0");
+                lblSaidasMesValor.Text = saidas.ToString("N0");
+                lblSubtituloDashboard.Text = "Entradas: recebimentos externos. Saídas: vendas e perdas. Transferências não são somadas nesses cards.";
+                lblTituloGrafico.Text = "Unidades movimentadas por dia";
+                lblTituloMovimentacoes.Text = "Movimentações recentes";
+                if (recentes.Items.Count == 0)
+                {
+                    recentes.Items.Add("Nenhuma movimentação autorizada neste mês.");
+                }
+                panelMovimentacoesRecentes.Controls.Add(recentes);
+                panelGraficoMovimentacoes.Paint += PintarMovimentosReais;
+                panelGraficoMovimentacoes.Resize += (s, e) => panelGraficoMovimentacoes.Invalidate();
+            }
+            catch (Exception erro)
+            {
+                lblEntradasMesValor.Text = "—";
+                lblSaidasMesValor.Text = "—";
+                lblTituloMovimentacoes.Text = "Não foi possível consultar o histórico";
+                System.Diagnostics.Trace.WriteLine(erro.GetType().Name + " em DashboardControl: " + erro.StackTrace);
+            }
+        }
+
+        private void PintarMovimentosReais(object sender, PaintEventArgs e)
+        {
+            if (quantidadesPorDia.Count == 0)
+            {
+                e.Graphics.DrawString("Sem movimentações neste mês.", Font, Brushes.Gray, 20, 90);
+                return;
+            }
+            decimal maior = 1;
+            foreach (decimal quantidade in quantidadesPorDia.Values)
+            {
+                maior = Math.Max(maior, quantidade);
+            }
+            List<DateTime> dias = new List<DateTime>(quantidadesPorDia.Keys);
+            dias.Sort();
+            Rectangle area = new Rectangle(64, 90,
+                Math.Max(1, panelGraficoMovimentacoes.Width - 100),
+                Math.Max(1, panelGraficoMovimentacoes.Height - 145));
+            PointF[] pontos = new PointF[dias.Count];
+            double intervalo = Math.Max(1, (dias[dias.Count - 1] - dias[0]).TotalDays);
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            using (Pen grade = new Pen(Color.FromArgb(232, 238, 246)))
+            using (Pen linha = new Pen(CASE.Utils.VisualUtils.Azul, 3F))
+            using (Brush pincel = new SolidBrush(CASE.Utils.VisualUtils.Azul))
+            using (Font fonte = new Font("Segoe UI", 9F))
+            {
+                for (int nivel = 0; nivel <= 4; nivel++)
+                {
+                    float y = area.Bottom - area.Height * nivel / 4F;
+                    e.Graphics.DrawLine(grade, area.Left, y, area.Right, y);
+                    string valor = (maior * nivel / 4).ToString("N0");
+                    SizeF tamanho = e.Graphics.MeasureString(valor, fonte);
+                    e.Graphics.DrawString(valor, fonte, Brushes.Gray,
+                        area.Left - tamanho.Width - 8, y - tamanho.Height / 2);
+                }
+
+                int ultimoRotulo = -100;
+                for (int i = 0; i < dias.Count; i++)
+                {
+                    float x = area.Left + (float)((dias[i] - dias[0]).TotalDays / intervalo * area.Width);
+                    if (dias.Count == 1)
+                    {
+                        x = area.Left + area.Width / 2F;
+                    }
+
+                    float y = area.Bottom - (float)(quantidadesPorDia[dias[i]] / maior) * area.Height;
+                    pontos[i] = new PointF(x, y);
+                    if (x - ultimoRotulo >= 58 || i == dias.Count - 1)
+                    {
+                        string data = dias[i].ToString("dd/MM");
+                        SizeF tamanho = e.Graphics.MeasureString(data, fonte);
+                        e.Graphics.DrawString(data, fonte, Brushes.Gray,
+                            x - tamanho.Width / 2, area.Bottom + 12);
+                        ultimoRotulo = (int)x;
+                    }
+                }
+
+                if (pontos.Length > 1)
+                {
+                    e.Graphics.DrawLines(linha, pontos);
+                }
+
+                foreach (PointF ponto in pontos)
+                {
+                    e.Graphics.FillEllipse(Brushes.White, ponto.X - 5, ponto.Y - 5, 10, 10);
+                    e.Graphics.FillEllipse(pincel, ponto.X - 3, ponto.Y - 3, 6, 6);
+                }
+            }
         }
     }
 }

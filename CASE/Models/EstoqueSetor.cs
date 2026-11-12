@@ -4,5 +4,6 @@ namespace CASE.Models
     {
         public int IdSetor { get; set; }
         public int IdLocalEstoque { get; set; }
+        public int IdEvento { get; set; }
     }
 }

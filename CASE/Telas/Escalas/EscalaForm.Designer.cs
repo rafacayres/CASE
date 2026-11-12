@@ -134,7 +134,6 @@ namespace CASE.Quermesse
             this.cmbEventoEscala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEventoEscala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbEventoEscala.Items.Clear();
-            this.cmbEventoEscala.SelectedIndex = 0;
             // lblFuncionario
             this.lblFuncionario.Name = "lblFuncionario";
             this.lblFuncionario.Location = new System.Drawing.Point(28, 123);

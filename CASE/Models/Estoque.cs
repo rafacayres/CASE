@@ -7,5 +7,6 @@ namespace CASE.Models
         public int IdProduto { get; set; }
         public decimal QuantidadeMinima { get; set; }
         public decimal QuantidadeIdeal { get; set; }
+        public decimal QuantidadeAtual { get; set; }
     }
 }

@@ -9,24 +9,51 @@ namespace CASE
     {
         internal sealed class Fornecedor
         {
-            public string Nome, Documento, Email, Telefone;
-            public override string ToString() { return Nome; }
+            public string Nome { get; set; }
+            public string Documento { get; set; }
+            public string Email { get; set; }
+            public string Telefone { get; set; }
+
+            public override string ToString()
+            {
+                return Nome;
+            }
         }
+
         internal sealed class Conta
         {
-            public string Nome, Login, Email, Situacao = "Pendente", Perfil = "Padrão", Motivo = "";
-            public DateTime SolicitadoEm = DateTime.Now;
+            public string Nome { get; set; }
+            public string Login { get; set; }
+            public string Email { get; set; }
+            public string Situacao { get; set; }
+            public string Perfil { get; set; }
+            public string Motivo { get; set; }
+            public DateTime SolicitadoEm { get; set; }
+
+            public Conta()
+            {
+                Situacao = "Pendente";
+                Perfil = "Padrão";
+                Motivo = string.Empty;
+                SolicitadoEm = DateTime.Now;
+            }
         }
+
         internal sealed class ItemEntrada
         {
-            public string Produto;
-            public decimal Quantidade, Custo;
+            public string Produto { get; set; }
+            public decimal Quantidade { get; set; }
+            public decimal Custo { get; set; }
         }
+
         internal sealed class Movimento
         {
-            public DateTime Data;
-            public string Produto, Local, Tipo, Referencia;
-            public decimal Quantidade;
+            public DateTime Data { get; set; }
+            public string Produto { get; set; }
+            public string Local { get; set; }
+            public string Tipo { get; set; }
+            public string Referencia { get; set; }
+            public decimal Quantidade { get; set; }
         }
         public static readonly string[] Locais = new string[0];
         public static readonly string[] Produtos = new string[0];
